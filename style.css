@@ -1,0 +1,65 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cabecalho {
+    color: white;
+    background-color: black;
+    text-align: center;
+    padding: 30px;
+}
+
+.cabecalho h3 {
+    color: rgb(206, 206, 8);
+}
+
+.alinha {
+    text-align: right;
+}
+
+.img-agro {
+    box-align: center;
+    border-radius: 15px;
+}
+
+.br-3 {
+    border-radius: 15px;
+}
+
+.img-card {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+.img-slide {
+    max-height: 400px;
+    object-fit: contain;
+    background-color: #f8f9fa;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+
+/* Novos estilos para o título e texto */
+.titulo-destaque {
+    font-size: 2.5em; /* Aumenta o tamanho da fonte */
+    color: #28a745; /* Cor verde para destacar */
+    margin-bottom: 20px; /* Adiciona um espaçamento abaixo do título */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave */
+}
+
+.texto-estiloso {
+    font-family: 'Georgia', serif; /* Escolha uma fonte com serifa para um visual elegante */
+    font-size: 1.1em; /* Aumenta um pouco o tamanho da fonte do texto */
+    line-height: 1.6; /* Melhora a legibilidade do texto */
+    color: #333; /* Cor do texto um pouco mais escura */
+    text-indent: 20px; /* Adiciona um recuo na primeira linha de cada parágrafo */
+}
