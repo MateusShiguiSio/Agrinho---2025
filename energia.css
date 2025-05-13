@@ -1,0 +1,101 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fbe7; /* Um tom de fundo levemente amarelado */
+    color: #424242;
+    line-height: 1.6;
+}
+
+.cabecalho-energia {
+    background-color: #ffc107 !important; /* Amarelo vibrante para energia */
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.cabecalho-energia h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.cabecalho-energia h3 {
+    color: #333; /* Cor escura para contraste no amarelo */
+    font-size: 1.2rem;
+}
+
+.navbar {
+    background-color: #fff8e1 !important; /* Amarelo bem claro para a navegação */
+}
+
+.nav-link {
+    padding: 0.8rem 1.2rem !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #e0a800 !important;
+}
+
+.titulo-energia {
+    color: #ff9800; /* Laranja para complementar o amarelo */
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.texto-energia {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-card-energia {
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.texto-energia-card {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.carousel-item {
+    max-height: 500px;
+    overflow: hidden;
+    background-color: #ddd; /* Para evitar flashes brancos durante a transição */
+}
+
+.img-slide-energia {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.carousel-caption h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+}
+
+.footer-energia {
+    padding: 1.5rem 0;
+    text-align: center;
+    color: #f8f9fa;
+}

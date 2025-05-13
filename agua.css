@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f8f9; /* Um tom de fundo mais suave */
+    color: #333;
+    line-height: 1.6;
+}
+
+.cabecalho-agua {
+    background-color: #007bff !important; /* Azul primário do Bootstrap para destacar */
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+
+.cabecalho-agua h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.cabecalho-agua h3 {
+    color: #e0f7fa; /* Um tom mais claro para o subtítulo */
+    font-size: 1.2rem;
+}
+
+.navbar {
+    background-color: #e3f2fd !important; /* Um azul bem claro para a navegação */
+}
+
+.nav-link {
+    padding: 0.8rem 1.2rem !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0056b3 !important;
+}
+
+.titulo-agua {
+    color: #28a745; /* Verde para associar à sustentabilidade */
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.texto-agua {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-card-agua {
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.texto-agua-card {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.carousel-item {
+    max-height: 500px;
+    overflow: hidden;
+    background-color: #ddd; /* Para evitar flashes brancos durante a transição */
+}
+
+.img-slide-agua {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    max-height: 500px;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.carousel-caption h5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+}
+
+.footer-agua {
+    padding: 1.5rem 0;
+    text-align: center;
+    color: #f8f9fa;
+}
