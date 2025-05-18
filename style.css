@@ -1,65 +1,67 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa; /* Adicionado um background leve */
 }
 
 .cabecalho {
     color: white;
-    background-color: black;
+    background-color: #198754; /* Verde mais vibrante do Bootstrap */
     text-align: center;
-    padding: 30px;
+    padding: 40px 20px; /* Aumentei o padding vertical */
+    margin-bottom: 20px; /* Adicionei margem inferior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adicionei uma leve sombra */
+}
+
+.cabecalho h1 {
+    font-family: 'Playfair Display', serif; /* Fonte elegante para o título */
+    font-size: 3em;
+    margin-bottom: 10px;
 }
 
 .cabecalho h3 {
-    color: rgb(206, 206, 8);
+    color: #ffe082; /* Amarelo/Dourado suave */
+    font-style: italic;
 }
 
-.alinha {
-    text-align: right;
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Leve sombra na navbar */
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107 !important; /* Amarelo ao passar o mouse */
 }
 
 .img-agro {
-    box-align: center;
     border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra na imagem principal */
+    transition: transform 0.3s ease-in-out;
+}
+
+.img-agro:hover {
+    transform: scale(1.03);
 }
 
 .br-3 {
     border-radius: 15px;
 }
-
 .img-card {
-    max-height: 200px;
+    max-height: 220px; /* Aumentei um pouco a altura */
     object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease-in-out;
 }
-
+.img-card:hover {
+    transform: scale(1.01);
+}
 .img-slide {
-    max-height: 400px;
-    object-fit: contain;
-    background-color: #f8f9fa;
-}
-
-.footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    width: 100%;
-}
-
-/* Novos estilos para o título e texto */
-.titulo-destaque {
-    font-size: 2.5em; /* Aumenta o tamanho da fonte */
-    color: #28a745; /* Cor verde para destacar */
-    margin-bottom: 20px; /* Adiciona um espaçamento abaixo do título */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave */
-}
-
-.texto-estiloso {
-    font-family: 'Georgia', serif; /* Escolha uma fonte com serifa para um visual elegante */
-    font-size: 1.1em; /* Aumenta um pouco o tamanho da fonte do texto */
-    line-height: 1.6; /* Melhora a legibilidade do texto */
-    color: #333; /* Cor do texto um pouco mais escura */
-    text-indent: 20px; /* Adiciona um recuo na primeira linha de cada parágrafo */
-}
+    max-height: 500px; /* Aumentei a altura do slide */
+    object-fit: cover; /* Alterado para cover para preencher melhor */
+    background-color: black }
