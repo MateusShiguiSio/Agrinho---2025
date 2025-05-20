@@ -8,7 +8,7 @@ body {
 }
 
 .cabecalho-producao {
-    background-color: #00bcd4 !important; /* Azul ciano para representar a indústria e a produção */
+    background-color: #000000 !important; /* Azul ciano para representar a indústria e a produção */
     padding: 2rem 0;
     margin-bottom: 2rem;
 }
