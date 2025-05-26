@@ -7,14 +7,150 @@
     <title>Produção & Indústria - AGRINHO 2025</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="producao.css">
+    <style>
+        :root {
+            --primary-producao: #dc3545; /* Vermelho Bootstrap */
+            --secondary-producao: #f8d7da; /* Vermelho claro de fundo */
+            --text-primary-producao: #721c24; /* Vermelho escuro para texto */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: white
+        }
+
+        .cabecalho-producao {
+            background-color: #202020 !important;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .cabecalho-producao h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: white; /* Texto branco no cabeçalho vermelho */
+        }
+
+        .cabecalho-producao h3 {
+            color: #ffebee; /* Tom de vermelho mais claro para o subtítulo */
+            font-size: 1.2rem;
+            display: block;
+        }
+
+        .navbar {
+            background-color: #fdecea !important; /* Vermelho bem claro para a navegação */
+        }
+
+        .nav-link {
+            color: var(--primary-producao) !important;
+            padding: 0.8rem 1.2rem !important;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #b3242b !important; /* Vermelho mais escuro no hover */
+        }
+
+        .nav-link.active {
+            color: #c42a2a !important; /* Mantendo o verde para a página ativa */
+        }
+
+        .titulo-producao {
+            color: var(--primary-producao);
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+        }
+
+        .texto-producao {
+            font-size: 1.1rem;
+            color: #495057; /* Cinza escuro padrão para o texto principal */
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .img-card-producao {
+            max-height: 180px;
+            object-fit: cover;
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+
+        .card {
+            border-color: var(--primary-producao) !important;
+        }
+
+        .card-title {
+            color: var(--primary-producao);
+        }
+
+        .btn-outline-info {
+            color: var(--primary-producao);
+            border-color: var(--primary-producao);
+        }
+
+        .btn-outline-info:hover {
+            background-color: var(--primary-producao);
+            color: white;
+        }
+
+        .texto-producao-card {
+            font-size: 0.95rem;
+            color: #6c757d; /* Cinza padrão para texto do card */
+        }
+
+        .footer-producao {
+            background-color: #343a40 !important; /* Preto para o footer */
+            padding: 1.5rem 0;
+            text-align: center;
+            color: #fff !important;
+        }
+
+        /* Animações */
+        .fade-in { opacity: 0; transition: opacity 1s ease-out; }
+        .fade-in.show { opacity: 1; }
+        .slide-in-left { transform: translateX(-50px); opacity: 0; transition: transform 1s ease-out, opacity 1s ease-out; }
+        .slide-in-left.show { transform: translateX(0); opacity: 1; }
+        .slide-in-right { transform: translateX(50px); opacity: 0; transition: transform 1s ease-out, opacity 1s ease-out; }
+        .slide-in-right.show { transform: translateX(0); opacity: 1; }
+        .fade-in-text { opacity: 0; animation: fadeIn 1s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .jump-letters { display: inline-block; }
+        .jump-letters span { display: inline-block; animation: jump 0.5s ease-in-out infinite alternate; }
+        @keyframes jump { 0% { transform: translateY(0); } 100% { transform: translateY(-10px); } }
+        .jump-letters span:nth-child(1) { animation-delay: 0s; }
+        .jump-letters span:nth-child(2) { animation-delay: 0.1s; }
+        .jump-letters span:nth-child(3) { animation-delay: 0.2s; }
+        .jump-letters span:nth-child(4) { animation-delay: 0.3s; }
+        .jump-letters span:nth-child(5) { animation-delay: 0.4s; }
+        .jump-letters span:nth-child(6) { animation-delay: 0.5s; }
+        .jump-letters span:nth-child(7) { animation-delay: 0.6s; }
+        .jump-letters span:nth-child(8) { animation-delay: 0.7s; }
+        .jump-letters span:nth-child(9) { animation-delay: 0.8s; }
+        .jump-letters span:nth-child(10) { animation-delay: 0.9s; }
+        .jump-letters span:nth-child(11) { animation-delay: 1s; }
+        .typing-animation { display: inline-block; }
+        .typing-animation span { opacity: 0; }
+        @keyframes typeWriter { to { opacity: 1; } }
+        .cabecalho-producao h3 { font-size: 1.2rem; display: block; }
+    </style>
 </head>
 
 <body>
     <header class="cabecalho-producao bg-info text-white py-4">
         <div class="container text-center">
-            <h1>AGRINHO 2025</h1>
-            <h3>Do Campo à Cidade: Celebrando a Produção e a Indústria</h3>
+            <h1 class="jump-letters" style="color: #ffffff;">
+                <span>A</span><span>G</span><span>R</span><span>I</span><span>N</span><span>H</span><span>O</span><span> </span><span>2</span><span>0</span><span>2</span><span>5</span>
+            </h1>
+            <h3 class="typing-animation">
+                <span>F</span><span>e</span><span></span><span>s</span><span>t</span><span>e</span><span>j</span><span>a</span><span>n</span><span>d</span><span></span><span>o</span> <span>a</span> <span>c</span><span>o</span><span>n</span><span>e</span><span>x</span><span>ã</span><span>o</span> <span>c</span><span>a</span><span>m</span><span>p</span><span>o</span> <span>e</span> <span>c</span><span>i</span><span>d</span><span>a</span><span>d</span><span>e</span>
+            </h3>
         </div>
     </header>
 
@@ -46,18 +182,18 @@
     <main class="container my-5">
         <section class="row align-items-center mb-5">
             <div class="col-md-6 text-center">
-                <img class="img-fluid rounded shadow-sm" src="./assets/image/farm-to-factory.png"
+                <img class="img-fluid rounded shadow-sm fade-in" src="./assets/image/farm-to-factory.png"
                     alt="Imagem representando a conexão entre a produção rural e a industrialização.">
             </div>
             <div class="col-md-6">
                 <div>
-                    <h2 class="titulo-producao mb-3">O Ciclo Produtivo: Do Campo à Indústria</h2>
-                    <p class="texto-producao lead">
+                    <h2 class="titulo-producao mb-3 slide-in-left">O Ciclo Produtivo: Do Campo à Indústria</h2>
+                    <p class="texto-producao lead slide-in-left" style="animation-delay: 0.2s;">
                         A produção rural é a base para muitas indústrias nas cidades. A transformação de matérias-primas
                         agrícolas em produtos acabados gera empregos, impulsiona a economia e conecta o trabalho do campo
                         com a vida urbana.
                     </p>
-                    <p class="texto-producao">
+                    <p class="texto-producao slide-in-left" style="animation-delay: 0.4s;">
                         Este tema explora a diversidade da produção rural, os processos de industrialização que agregam
                         valor aos produtos agrícolas e a importância da logística e da inovação para fortalecer essa
                         cadeia produtiva essencial.
@@ -67,9 +203,9 @@
         </section>
 
         <section class="py-4">
-            <h3 class="text-center mb-4">A Dinâmica entre o Campo e a Indústria</h3>
+            <h3 class="text-center mb-4 fade-in-text">A Dinâmica entre o Campo e a Indústria</h3>
             <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col">
+                <div class="col fade-in" style="animation-delay: 0.6s;">
                     <div class="card h-100 shadow-sm border-info">
                         <img src="./assets/image/agricultural-products.png" class="card-img-top img-card-producao"
                             alt="Imagem de diversos produtos agrícolas.">
@@ -81,7 +217,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col fade-in" style="animation-delay: 0.8s;">
                     <div class="card h-100 shadow-sm border-info">
                         <img src="./assets/image/food-processing.png" class="card-img-top img-card-producao"
                             alt="Imagem de uma indústria de processamento de alimentos.">
@@ -93,7 +229,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col fade-in" style="animation-delay: 1.0s;">
                     <div class="card h-100 shadow-sm border-info">
                         <img src="./assets/image/supply-chain.png" class="card-img-top img-card-producao"
                             alt="Imagem de uma cadeia de suprimentos.">
@@ -107,47 +243,10 @@
                 </div>
             </div>
         </section>
-
-        <section id="carouselExampleCaptions" class="carousel slide pt-4 pb-3" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./assets/image/agro-industry-1.jpg" class="d-block w-100 img-slide-producao"
-                        alt="Imagem de uma agroindústria em funcionamento.">
-                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
-                        <h5>Integrando o Campo e a Indústria</h5>
-                        <p>Exemplos de sucesso na integração da produção rural com a industrialização urbana.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/image/agro-industry-2.jpg" class="d-block w-100 img-slide-producao"
-                        alt="Imagem de produtos processados originários do campo.">
-                    <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded">
-                        <h5>Valorizando a Produção Nacional</h5>
-                        <p>Como a industrialização agrega valor aos produtos do campo e fortalece a economia.</p>
-                    </div>
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Próximo</span>
-            </button>
-        </section>
     </main>
 
     <footer class="footer-producao bg-dark text-white py-3 mt-5">
-        <div class="container text-center">
+        <div class="text-center">
             <p class="mb-0">&copy; 2025 AGRINHO - Festejando a Conexão Campo Cidade. Todos os direitos reservados.</p>
         </div>
     </footer>
@@ -155,6 +254,48 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const fadeInElements = document.querySelectorAll('.fade-in');
+            fadeInElements.forEach(element => {
+                setTimeout(() => {
+                    element.classList.add('show');
+                }, 100);
+            });
+
+            const slideInLeftElements = document.querySelectorAll('.slide-in-left');
+            slideInLeftElements.forEach(element => {
+                setTimeout(() => {
+                    element.classList.add('show');
+                }, 100);
+            });
+
+            const slideInRightElements = document.querySelectorAll('.slide-in-right');
+            slideInRightElements.forEach(element => {
+                setTimeout(() => {
+                    element.classList.add('show');
+                }, 100);
+            });
+
+            const fadeInTextElements = document.querySelectorAll('.fade-in-text');
+            fadeInTextElements.forEach(element => {
+                element.classList.add('show');
+            });
+
+            // Animação de digitação para o subtítulo
+            const typingSubtitle = document.querySelector('.typing-animation');
+            if (typingSubtitle) {
+                const spansSubtitle = typingSubtitle.querySelectorAll('span');
+                spansSubtitle.forEach((span, index) => {
+                    span.style.animation = `typeWriter 0.09s ease-in-out forwards ${index * 0.03}s`;
+                });
+            }
+
+            // Animação de salto para o título principal
+            const jumpTitle = document.querySelector('.jump-letters');
+            // A animação do título já é controlada pelo CSS aplicado aos spans
+        });
+    </script>
 </body>
 
 </html>

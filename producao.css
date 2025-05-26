@@ -2,13 +2,13 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff; /* Um tom de azul bem claro e suave */
+    background-color: #ffffff; /* Um tom de azul bem claro e suave */
     color: #37474f; /* Um tom de cinza azulado escuro */
     line-height: 1.6;
 }
 
 .cabecalho-producao {
-    background-color: #000000 !important; /* Azul ciano para representar a indústria e a produção */
+    background-color: #202020 !important; /* Azul ciano para representar a indústria e a produção */
     padding: 2rem 0;
     margin-bottom: 2rem;
 }
@@ -25,9 +25,8 @@ body {
 }
 
 .navbar {
-    background-color: #e0f7fa !important; /* Azul ciano bem claro para a navegação */
+    background-color: #e0f7fa !important; /* Azul ciano bem claro para a navegação *
 }
-
 .nav-link {
     padding: 0.8rem 1.2rem !important;
     transition: color 0.3s ease;
@@ -63,35 +62,6 @@ body {
 .texto-producao-card {
     font-size: 0.95rem;
     color: #607d8b; /* Um tom de cinza azulado */
-}
-
-.carousel-item {
-    max-height: 500px;
-    overflow: hidden;
-    background-color: #ddd; /* Para evitar flashes brancos durante a transição */
-}
-
-.img-slide-producao {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    max-height: 500px;
-}
-
-.carousel-caption {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 1rem;
-    border-radius: 0.5rem;
-}
-
-.carousel-caption h5 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.carousel-caption p {
-    font-size: 1rem;
 }
 
 .footer-producao {

@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif; /* Alterado para a fonte da página de energia */
+    font-family: 'Roboto', sans-serif; /* Alterado para a fonte da página de energia */
     margin: 0;
     padding: 0;
     background-color: #f9fbe7; /* Um tom de fundo levemente amarelado */
@@ -8,7 +8,7 @@ body {
 }
 
 .cabecalho {
-    background-color: #000000 !important; /* Amarelo vibrante para energia */
+    background-color: #202020 !important;
     padding: 2rem 0;
     margin-bottom: 2rem;
     text-align: center;
@@ -23,25 +23,33 @@ body {
 }
 
 .cabecalho h3 {
-    color: #6e6d6d; /* Cor escura para contraste no amarelo */
+    color: #b9b9b9; /* Cor escura para contraste no amarelo */
     font-size: 1.2rem;
     font-style: normal; /* Removido itálico para seguir o estilo da página de energia */
 }
 
 .navbar {
-    background-color: #fff8e1 !important; /* Amarelo bem claro para a navegação */
+    background-color: rgba(212, 237, 218, 0.7) !important; /* Fundo verde claro mais transparente */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .navbar-nav .nav-link {
-    font-weight: 500;
-    transition: color 0.3s ease-in-out;
-    padding: 0.8rem 1.2rem !important; /* Estilo do link da navbar de energia */
-    color: #2b2a27 !important; /* Cor dos links */
+    font-weight: bold !important; /* Texto em negrito */
+    color: #29c44d !important; /* Texto verde escuro para os links da navbar */
 }
 
 .navbar-nav .nav-link:hover {
-    color: #e0a800 !important; /* Amarelo escuro ao passar o mouse */
+    font-weight: bold !important; /* Texto em negrito ao passar o mouse */
+    color: #28a846 !important; /* Texto verde mais escuro ao passar o mouse */
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: bold !important; /* Texto em negrito no link ativo */
+    color: #198754 !important; /* Verde mais vibrante para o link ativo */
+}
+
+.card-body h5 {
+    color: #199123;
 }
 
 .img-agro {
@@ -66,124 +74,33 @@ body {
 .img-card-custom:hover {
     transform: scale(1.01);
 }
-
-.img-slide {
-    max-height: 500px;
-    object-fit: cover;
-    background-color: #ddd; /* Cinza claro para o fundo do slide */
-    border-radius: 8px;
-    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.07);
+.jump-letters {
+    display: inline-block; /* Para que os spans fiquem lado a lado e possamos animá-los */
 }
 
-.titulo-destaque { /* Cor e tamanho do título da página de energia */
-    color: #ff9800; /* Laranja para complementar o amarelo */
-    font-size: 2.2rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    font-family: 'Open Sans', sans-serif; /* Alterado para a fonte da página de energia */
-    text-shadow: none; /* Removido text-shadow para seguir o estilo da página de energia */
-    animation: fadeIn 1s ease-out;
+.jump-letters span {
+    display: inline-block; /* Permite aplicar transformações em cada letra */
+    animation: jump 0.5s ease-in-out infinite alternate; /* Define a animação */
 }
 
-.texto-estiloso { /* Cor e tamanho do texto da página de energia */
-    font-family: 'Open Sans', sans-serif; /* Alterado para a fonte da página de energia */
-    font-size: 1.1rem;
-    line-height: 1.6; /* Ajustado para se adequar à linha de altura do body de energia */
-    color: #555;
-    text-indent: 0; /* Removido o recuo para seguir o estilo da página de energia */
-    animation: slideInRight 1s ease-out;
-}
+/* Define um atraso diferente para cada letra criar o efeito de onda */
+.jump-letters span:nth-child(1) { animation-delay: 0s; }
+.jump-letters span:nth-child(2) { animation-delay: 0.1s; }
+.jump-letters span:nth-child(3) { animation-delay: 0.2s; }
+.jump-letters span:nth-child(4) { animation-delay: 0.3s; }
+.jump-letters span:nth-child(5) { animation-delay: 0.4s; }
+.jump-letters span:nth-child(6) { animation-delay: 0.5s; }
+.jump-letters span:nth-child(7) { animation-delay: 0.6s; }
+.jump-letters span:nth-child(8) { animation-delay: 0.7s; }
+.jump-letters span:nth-child(9) { animation-delay: 0.8s; }
+.jump-letters span:nth-child(10) { animation-delay: 0.9s; }
+.jump-letters span:nth-child(11) { animation-delay: 1s; }
 
-.texto-card { /* Nova classe para o texto dos cards, similar ao texto-energia-card */
-    font-size: 0.95rem;
-    color: #666;
-}
-
-.card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease-in-out;
-    border: 1px solid #ffc107 !important; /* Borda amarela nos cards */
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card-title {
-    font-family: 'Open Sans', sans-serif; /* Alterado para a fonte da página de energia */
-    font-size: 1.5em;
-    color: #ffc107; /* Cor do título do card de energia */
-}
-
-.btn-primary { /* Estilo do botão de energia */
-    background-color: transparent;
-    border-color: #ffc107;
-    color: #ffc107;
-    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-
-.btn-primary:hover {
-    background-color: #ffc107;
-    border-color: #ffc107;
-    color: white;
-}
-
-.footer { /* Estilo do rodapé de energia */
-    background-color: #424242; /* Cinza mais escuro para o rodapé */
-    color: #f8f9fa;
-    text-align: center;
-    padding: 1.5rem 0; /* Ajustado padding */
-    position: relative;
-    width: 100%;
-    margin-top: 30px;
-}
-
-.carousel-inner .carousel-item {
-    animation: carouselFade 0.8s ease-in-out;
-}
-
-@keyframes carouselFade {
-    from {
-        opacity: 0;
+@keyframes jump {
+    0% {
+        transform: translateY(0);
     }
-
-    to {
-        opacity: 1;
+    100% {
+        transform: translateY(-10px); /* Ajuste a altura do "salto" */
     }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        transform: translateX(50px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-/* Estilo para o título da seção de cards, seguindo o padrão de energia */
-.section-title {
-    font-family: 'Open Sans', sans-serif;
-    color: #ff9800; /* Laranja para complementar o amarelo */
-    font-weight: bold;
-    font-size: 2.2rem;
-}
-.bg-light{
-background-color: #2b2a27;
-
 }
