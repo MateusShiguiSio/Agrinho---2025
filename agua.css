@@ -2,130 +2,268 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f8f9; /* Um tom de fundo mais suave */
+    background-color: #f4f8f9;
+    /* Um tom de fundo mais suave */
     color: #333;
     line-height: 1.6;
-}
-
-.cabecalho-agua {
-    background-color: #202020 !important; /* Azul primário do Bootstrap para destacar */
+   }
+  
+   .cabecalho-agua {
+    background-color: #202020 !important;
+    /* Azul primário do Bootstrap para destacar */
     padding: 2rem 0;
     margin-bottom: 2rem;
-}
-
-.cabecalho-agua h1 {
+    border-width: 3px;
+    border-style: solid;
+    border-color: #0056b3
+   }
+  
+   .cabecalho-agua h1 {
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
-}
-
-.cabecalho-agua h3 {
-    color: #e0f7fa; /* Um tom mais claro para o subtítulo */
+   }
+  
+   .cabecalho-agua h3 {
+    color: #e0f7fa;
+    /* Um tom mais claro para o subtítulo */
     font-size: 1.2rem;
-}
-
-.navbar {
-    background-color: #e3f2fd !important; /* Um azul bem claro para a navegação */
-}
-
-.nav-link {
+    text-shadow: 3px 5px 5px #000000;
+   }
+  
+   .navbar {
+    background-color: #e3f2fd !important;
+    /* Um azul bem claro para a navegação */
+   }
+  
+   .nav-link {
     padding: 0.8rem 1.2rem !important;
     transition: color 0.3s ease;
-}
-
-.nav-link:hover {
+    font-weight: bold
+   }
+  
+   .nav-link:hover {
     color: #0056b3 !important;
-}
-
-.titulo-agua {
-    color: #185a99; /* Verde para associar à sustentabilidade */
+    font-weight: bold
+   }
+  
+   .nav-link.active {
+    color: #1c6f7e !important;
+    font-weight: bold
+    /* Mantendo o verde para a página ativa */
+   }
+  
+   .typing-animation {
+    display: inline-block;
+   }
+  
+   .typing-animation span {
+    opacity: 0;
+   }
+  
+   @keyframes typeWriter {
+    to {
+     opacity: 1;
+    }
+   }
+  
+   .fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+   }
+  
+   .fade-in.show {
+    opacity: 1;
+   }
+  
+   .slide-in-left {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+   }
+  
+   .slide-in-left.show {
+    transform: translateX(0);
+    opacity: 1;
+   }
+  
+   .slide-in-right {
+    transform: translateX(50px);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+   }
+  
+   .slide-in-right.show {
+    transform: translateX(0);
+    opacity: 1;
+   }
+  
+   .fade-in-text {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+   }
+  
+   @keyframes fadeIn {
+    from {
+     opacity: 0;
+    }
+  
+    to {
+     opacity: 1;
+    }
+   }
+  
+   .jump-letters {
+    display: inline-block;
+   }
+  
+   .jump-letters span {
+    display: inline-block;
+    animation: jump 0.5s ease-in-out infinite alternate;
+   }
+  
+   @keyframes jump {
+    0% {
+     transform: translateY(0);
+    }
+  
+    100% {
+     transform: translateY(-10px);
+    }
+   }
+  
+   /* Adicionando delays individuais para um efeito mais interessante */
+   .jump-letters span:nth-child(1) {
+    animation-delay: 0s;
+   }
+  
+   .jump-letters span:nth-child(2) {
+    animation-delay: 0.1s;
+   }
+  
+   .jump-letters span:nth-child(3) {
+    animation-delay: 0.2s;
+   }
+  
+   .jump-letters span:nth-child(4) {
+    animation-delay: 0.3s;
+   }
+  
+   .jump-letters span:nth-child(5) {
+    animation-delay: 0.4s;
+   }
+  
+   .jump-letters span:nth-child(6) {
+    animation-delay: 0.5s;
+   }
+  
+   .jump-letters span:nth-child(7) {
+    animation-delay: 0.6s;
+   }
+  
+   .jump-letters span:nth-child(8) {
+    animation-delay: 0.7s;
+   }
+  
+   .jump-letters span:nth-child(9) {
+    animation-delay: 0.8s;
+   }
+  
+   .jump-letters span:nth-child(10) {
+    animation-delay: 0.9s;
+   }
+  
+   .jump-letters span:nth-child(11) {
+    animation-delay: 1s;
+   }
+  
+   .cabecalho-agua h3 {
+    color: #e0f7fa;
+    /* Um tom mais claro para o subtítulo */
+    font-size: 1.2rem;
+    display: block;
+    /* Garante que o subtítulo fique em uma nova linha */
+   }
+  
+   .titulo-agua {
+    color: #185a99;
+    /* Verde para associar à sustentabilidade */
     font-size: 2.2rem;
     font-weight: bold;
     margin-bottom: 1.5rem;
-}
-
-.texto-agua {
+   }
+  
+   .texto-agua {
     font-size: 1.1rem;
     color: #555;
-}
-
-.img-fluid {
+   }
+  
+   .img-fluid {
     max-width: 100%;
     height: auto;
-}
-
-.img-card-agua {
+   }
+  
+   .img-card-agua {
     max-height: 180px;
     object-fit: cover;
     border-radius: 0.5rem 0.5rem 0 0;
-}
-
-.texto-agua-card {
+   }
+  
+   .texto-agua-card {
     font-size: 0.95rem;
     color: #666;
-}
-
-.carousel-item {
-    max-height: 500px;
-    overflow: hidden;
-    background-color: #ddd; /* Para evitar flashes brancos durante a transição */
-}
-
-.img-slide-agua {
+   }
+  
+   .img-slide-agua {
     width: 100%;
     height: auto;
     object-fit: cover;
     max-height: 500px;
-}
-.jump-letters {
+   }
+  
+   .jump-letters {
     display: inline-block;
-}
-
-.jump-letters span {
+   }
+  
+   .jump-letters span {
+    font-size: 80px;
     display: inline-block;
+    /* Permite aplicar transformações em cada letra */
     animation: jump 0.5s ease-in-out infinite alternate;
-}
-
-@keyframes jump {
+    /* Define a animação */
+    text-shadow: 5px 10px 5px #000000;
+   }
+  
+   @keyframes jump {
     0% {
-        transform: translateY(0);
+     transform: translateY(0);
     }
+  
     100% {
-        transform: translateY(-10px);
+     transform: translateY(-10px);
     }
-}
-
-/* Adicionando delays individuais para um efeito mais interessante */
-.jump-letters span:nth-child(1) { animation-delay: 0s; }
-.jump-letters span:nth-child(2) { animation-delay: 0.1s; }
-.jump-letters span:nth-child(3) { animation-delay: 0.2s; }
-.jump-letters span:nth-child(4) { animation-delay: 0.3s; }
-.jump-letters span:nth-child(5) { animation-delay: 0.4s; }
-.jump-letters span:nth-child(6) { animation-delay: 0.5s; }
-.jump-letters span:nth-child(7) { animation-delay: 0.6s; }
-.jump-letters span:nth-child(8) { animation-delay: 0.7s; }
-.jump-letters span:nth-child(9) { animation-delay: 0.8s; }
-.jump-letters span:nth-child(10) { animation-delay: 0.9s; }
-.jump-letters span:nth-child(11) { animation-delay: 1s; }
-
-.carousel-caption {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 1rem;
-    border-radius: 0.5rem;
-}
-
-.carousel-caption h5 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
-
-.carousel-caption p {
-    font-size: 1rem;
-}
-
-.footer-agua {
-    padding: 1.5rem 0;
-    text-align: center;
-    color: #f8f9fa;
-}
+   }
+  
+   /* Adicionando delays individuais para um efeito mais interessante */
+   .jump-letters span:nth-child(1) {
+    animation-delay: 0s;
+   }
+  
+   .jump-letters span:nth-child(2) {
+    animation-delay: 0.1s;
+   }
+  
+   .jump-letters span:nth-child(3) {
+    animation-delay: 0.2s;
+   }
+  
+   .jump-letters span:nth-child(4) {
+    animation-delay: 0.3s;
+   }
+  
+   .jump-letters span:nth-child(5) {
+    animation-delay: 0.4s;
+   }
+  
+   .jump-letters span:nth-child(6) {
+    animation-delay: 0.5}

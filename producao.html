@@ -1,301 +1,285 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+ <html lang="pt-BR">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produção & Indústria - AGRINHO 2025</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <style>
-        :root {
-            --primary-producao: #dc3545; /* Vermelho Bootstrap */
-            --secondary-producao: #f8d7da; /* Vermelho claro de fundo */
-            --text-primary-producao: #721c24; /* Vermelho escuro para texto */
-        }
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produção & Indústria - AGRINHO 2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="producao.css">
+  <style>
+   .topico-destacado {
+    border: 1px solid #ced4da;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+   }
+  </style>
+ </head>
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            background-color: white
-        }
+ <body>
+  <header class="cabecalho-producao bg-warning text-dark py-4">
+    <div class="container text-center">
+      <h1 class="jump-letters h1p" style="color: #ffffff;">
+        <span>A</span><span>G</span><span>R</span><span>I</span><span>N</span><span>H</span><span>O</span><span>
+        </span> <span>2</span><span>0</span><span>2</span><span>5</span>
+      </h1>
+      <h3 class="typing-animation " style="animation-delay: 1s;">
+        <span>F</span><span>e</span><span></span><span>s</span><span>t</span><span>e</span><span>j</span><span>a</span><span>n</span><span>d</span><span>o</span>
+        <span>a</span> <span>c</span><span>o</span><span>n</span><span>e</span><span>x</span><span>ã</span><span>o</span>
+        <span>c</span><span>a</span><span>m</span><span>p</span><span>o</span> <span>e</span> <span>c</span><span>i</span><span>d</span><span>a</span><span>d</span><span>e</span>
+      </h3>
+    </div>
+    </div>
+  </header>
 
-        .cabecalho-producao {
-            background-color: #202020 !important;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
-        }
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="index.html">Página Inicial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="energia.html">Energia Campo-Cidade</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-primary" href="agua.html">Água: Elo Campo-Cidade</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active text-sucess fw-bold" aria-current="page" href="producao.html">Produção</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-        .cabecalho-producao h1 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-            color: white; /* Texto branco no cabeçalho vermelho */
-        }
+  <main class="container my-5 d-flex flex-column align-items-center">
+   <section class="mb-5 col-12 text-center">
+    <div>
+     <h2 class="titulo-producao mb-3 slide-in-left">O Ciclo Produtivo: Do Campo à Indústria</h2>
+     <p class="texto-producao lead slide-in-left" style="animation-delay: 0.2s;">
+      A produção rural é a base para muitas indústrias nas cidades. A transformação de matérias-primas
+      agrícolas em produtos acabados gera empregos, impulsiona a economia e conecta o trabalho do campo
+      com a vida urbana. Este processo dinâmico envolve desde o cultivo da terra e a criação de animais
+      até a colheita, o transporte e o processamento industrial.
+     </p>
+     <p class="texto-producao slide-in-left" style="animation-delay: 0.4s;">
+      Este tema explora a diversidade da produção rural, abrangendo desde a agricultura familiar até o
+      agronegócio em larga escala. Analisamos os processos de industrialização que agregam valor aos
+      produtos agrícolas, transformando grãos em alimentos processados, fibras em tecidos e madeira em
+      móveis. A importância do gerenciamento e da inovação, incluindo tecnologias e a automação industrial,
+      são cruciais para fortalecer esse ciclo produtivo essencial, tornando-a mais eficiente e sustentável.
+     </p>
+    </div>
+   </section>
 
-        .cabecalho-producao h3 {
-            color: #ffebee; /* Tom de vermelho mais claro para o subtítulo */
-            font-size: 1.2rem;
-            display: block;
-        }
+   <section class="row mt-4">
+    <div class="col-md-6 mb-4 text-center fade-in-element">
+     <img src="assets/image/coprossel.png" alt="Processo Industrial" class="img-fluid rounded">
+     <figcaption class="mt-2 text-muted" style="font-size: 0.9em; text-align: center;">
+      Polo industrial da Coprossel - Laranjeiras do Sul - PR.
+     </figcaption>
+    </div>
+    <div class="col-md-6 mb-4 fade-in-element">
+     <div>
+      <h5 class="titulo-producao-card">Industrialização e Valor Agregado</h5>
+      <p class="texto-producao-card">
+       A conversão de recursos naturais brutos em bens manufaturados de maior valor é impulsionada
+       pela industrialização. Através de etapas como o aprimoramento, a produção e o conservação,
+       são criados itens inéditos e aumenta possibilidades de lucro. A modernização no setor industrial,
+       impulsionada por tecnologias de ponta e a otimização constante de métodos, é crucial para a capacidade
+       de concorrer e satisfazer as necessidades do público.
+      </p>
+      <a href="https://maisretorno.com/portal/termos/v/valor-agregado" class="btn btn-outline-info"
+       target="_blank">Veja Mais</a>
+     </div>
+    </div>
+   </section>
 
-        .navbar {
-            background-color: #fdecea !important; /* Vermelho bem claro para a navegação */
-        }
+   <section class="row mt-4">
+    <div class="col-md-4 mb-4 fade-in-element">
+     <div class="bloco-producao">
+      <h5 class="titulo-producaos-card">Produção Primária</h5>
+      <p class="texto-producaos-card">
+       Envolve a extração de matérias-primas da natureza, como agricultura (plantio e colheita), pecuária (criação de animais),
+       pesca (captura de peixes e outros organismos aquáticos) e mineração (extração de minerais do solo). É a base da cadeia produtiva,
+       fornecendo os recursos iniciais para as outras atividades econômicas.
+      </p>
+      <a href="https://pt.wikipedia.org/wiki/Setor_prim%C3%A1rio" class="btn btn-outline-info btn-sm"
+       target="_blank">Sobre</a>
+     </div>
+    </div>
+    <div class="col-md-4 mb-4 fade-in-element">
+     <div class="bloco-producao">
+      <h5 class="titulo-producaos-card">Produção Secundária</h5>
+      <p class="texto-producaos-card">
+       Transforma as matérias-primas em bens industrializados, através de processos como a fabricação de alimentos processados (enlatados, congelados),
+       a produção de vestuário (tecidos, confecções) e a montagem de eletrônicos (celulares, computadores). Este setor agrega valor às matérias-primas,
+       criando produtos com maior utilidade.
+      </p>
+      <a href="https://pt.wikipedia.org/wiki/Setor_secund%C3%A1rio" class="btn btn-outline-info btn-sm"
+       target="_blank">Sobre</a>
+     </div>
+    </div>
+    <div class="col-md-4 mb-4 fade-in-element">
+     <div class="bloco-producao">
+      <h5 class="titulo-producaos-card">Produção Terciária</h5>
+      <p class="texto-producaos-card">
+       Oferece serviços essenciais e de apoio às outras etapas da produção, incluindo comércio (venda de produtos), educação (formação de profissionais),
+       saúde (bem-estar da população), transporte (de bens e pessoas) e turismo (lazer e economia). Este setor é fundamental para o funcionamento
+       da sociedade e da economia como um todo.
+      </p>
+      <a href="https://pt.wikipedia.org/wiki/Setor_terci%C3%A1rio" class="btn btn-outline-info btn-sm"
+       target="_blank">Sobre</a>
+     </div>
+    </div>
+   </section>
 
-        .nav-link {
-            color: var(--primary-producao) !important;
-            padding: 0.8rem 1.2rem !important;
-            transition: color 0.3s ease;
-        }
+   <section class="mt-5">
+    <h2 class="titulo-producao text-center mb-4">Impacto da Conexão</h2>
+    <div class="row">
+     <div class="col-md-6 mb-3">
+      <div class="topico-destacado">
+       <h5 class="titulo-producaos-card"><span role="img" aria-label="emprego">🏭</span> Geração de Empregos</h5>
+       <p class="texto-producaos-card">
+        A produção no campo impulsiona a criação de inúmeros empregos, desde o cultivo e a criação de animais até as indústrias de processamento e a logística nas cidades. Essa cadeia produtiva é vital para a economia.
+       </p>
+      </div>
+     </div>
+     <div class="col-md-6 mb-3">
+      <div class="topico-destacado">
+       <h5 class="titulo-producaos-card"><span role="img" aria-label="desenvolvimento">🏘️</span> Desenvolvimento Regional</h5>
+       <p class="texto-producaos-card">
+        A forte ligação entre o campo e a cidade promove um desenvolvimento equilibrado em ambas as regiões, gerando oportunidades e melhorando a qualidade de vida.
+       </p>
+      </div>
+     </div>
+     <div class="col-md-6 mb-3">
+      <div class="topico-destacado">
+       <h5 class="titulo-producaos-card"><span role="img" aria-label="alimento">🍎</span> Segurança Alimentar</h5>
+       <p class="texto-producaos-card">
+        Um campo produtivo é essencial para garantir que as cidades tenham acesso a alimentos de qualidade, nutritivos e em quantidade suficiente para a população.
+       </p>
+      </div>
+     </div>
+     <div class="col-md-6 mb-3">
+      <div class="topico-destacado">
+       <h5 class="titulo-producaos-card"><span role="img" aria-label="economia">💰</span> Impulso Econômico</h5>
+       <p class="texto-producaos-card">
+        A troca de produtos e serviços entre o campo e a cidade fortalece a economia como um todo, criando um ciclo virtuoso de crescimento.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
 
-        .nav-link:hover {
-            color: #b3242b !important; /* Vermelho mais escuro no hover */
-        }
+   <section class="mt-4">
+    <h2 class="titulo-producao text-center mb-4">Sustentabilidade e Inovação</h2>
+    <div class="row">
+     <div class="col-md-6 mb-3">
+      <div class="topico-destacado">
+       <h5 class="titulo-producaos-card"><span role="img" aria-label="folha">🌿</span> Práticas Sustentáveis</h5>
+       <p class="texto-producaos-card">
+        A adoção de métodos sustentáveis no campo e na indústria é crucial para proteger o meio ambiente e garantir a produção para as futuras gerações.
+       </p>
+      </div>
+     </div>
+     <div class="col-md-6 mb-3">
+      <div class="topico-destacado">
+       <h5 class="titulo-producaos-card"><span role="img" aria-label="tecnologia">⚙️</span> Inovação Tecnológica</h5>
+       <p class="texto-producaos-card">
+        A tecnologia desempenha um papel fundamental em otimizar a produção, reduzir o desperdício e criar novas formas de conexão entre o campo e a cidade.
+       </p>
+      </div>
+     </div>
+     <div class="col-md-6 mb-3">
+      <div class="topico-destacado">
+       <h5 class="titulo-producaos-card"><span role="img" aria-label="conexão">🔗</span> Conectividade Inteligente</h5>
+       <p class="texto-producaos-card">
+        Plataformas digitais e outras ferramentas online facilitam a comunicação e o comércio direto entre produtores rurais e consumidores urbanos.
+       </p>
+      </div>
+     </div>
+     <div class="col-md-6 mb-3">
+      <div class="topico-destacado">
+       <h5 class="titulo-producaos-card"><span role="img" aria-label="planeta">🌎</span> Menor Degradação Ambiental</h5>
+       <p class="texto-producaos-card">
+        Práticas agrícolas e industriais menos destrutivas são essenciais para preservar o meio ambiente, a biodiversidade e os recursos naturais para o futuro.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <div class="text-center mt-5">
+    <h3 style="color: #d81e1e;">Para subir ao topo:</h3>
+    <a href="#" class="btn btn-outline-danger btn-sm mt-2">Aperte aqui para ir até a Barra de Navegação</a>
+  </div>
+  </main>
 
-        .nav-link.active {
-            color: #c42a2a !important; /* Mantendo o verde para a página ativa */
-        }
+  <footer class="footer-producao bg-dark text-white py-3 mt-5">
+   <div class="text-center">
+    <p class="mb-0">&copy; 2025 AGRINHO - Festejando a Conexão Campo Cidade. Todos os direitos reservados.</p>
+   </div>
+  </footer>
 
-        .titulo-producao {
-            color: var(--primary-producao);
-            font-size: 2.2rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-        }
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+   integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
+    const fadeInElements = document.querySelectorAll('.fade-in');
+    fadeInElements.forEach(element => {
+     setTimeout(() => {
+      element.classList.add('show');
+     }, 100);
+    });
 
-        .texto-producao {
-            font-size: 1.1rem;
-            color: #495057; /* Cinza escuro padrão para o texto principal */
-        }
+    const slideInLeftElements = document.querySelectorAll('.slide-in-left');
+    slideInLeftElements.forEach(element => {
+     setTimeout(() => {
+      element.classList.add('show');
+     }, 100);
+    });
 
-        .img-fluid {
-            max-width: 100%;
-            height: auto;
-        }
+    const slideInRightElements = document.querySelectorAll('.slide-in-right');
+    slideInRightElements.forEach(element => {
+     setTimeout(() => {
+      element.classList.add('show');
+     }, 100);
+    });
 
-        .img-card-producao {
-            max-height: 180px;
-            object-fit: cover;
-            border-radius: 0.5rem 0.5rem 0 0;
-        }
+    const fadeInTextElements = document.querySelectorAll('.fade-in-text');
+    fadeInTextElements.forEach(element => {
+     element.classList.add('show');
+    });
 
-        .card {
-            border-color: var(--primary-producao) !important;
-        }
+    const typingSubtitle = document.querySelector('.typing-animation');
+    if (typingSubtitle) {
+     const spansSubtitle = typingSubtitle.querySelectorAll('span');
+     spansSubtitle.forEach((span, index) => {
+      span.style.animation = `typeWriter 0.09s ease-in-out forwards ${index * 0.03}s`;
+     });
+    }
 
-        .card-title {
-            color: var(--primary-producao);
-        }
+    const jumpTitle = document.querySelector('.jump-letters');
 
-        .btn-outline-info {
-            color: var(--primary-producao);
-            border-color: var(--primary-producao);
-        }
+    const elementsToFadeIn = document.querySelectorAll('.fade-in-element');
+    elementsToFadeIn.forEach(element => {
+     element.classList.add('fade-in');
+    });
 
-        .btn-outline-info:hover {
-            background-color: var(--primary-producao);
-            color: white;
-        }
+    setTimeout(() => {
+     elementsToFadeIn.forEach(element => {
+      element.classList.add('show');
+     });
+    }, 300);
+   });
+  </script>
+ </body>
 
-        .texto-producao-card {
-            font-size: 0.95rem;
-            color: #6c757d; /* Cinza padrão para texto do card */
-        }
-
-        .footer-producao {
-            background-color: #343a40 !important; /* Preto para o footer */
-            padding: 1.5rem 0;
-            text-align: center;
-            color: #fff !important;
-        }
-
-        /* Animações */
-        .fade-in { opacity: 0; transition: opacity 1s ease-out; }
-        .fade-in.show { opacity: 1; }
-        .slide-in-left { transform: translateX(-50px); opacity: 0; transition: transform 1s ease-out, opacity 1s ease-out; }
-        .slide-in-left.show { transform: translateX(0); opacity: 1; }
-        .slide-in-right { transform: translateX(50px); opacity: 0; transition: transform 1s ease-out, opacity 1s ease-out; }
-        .slide-in-right.show { transform: translateX(0); opacity: 1; }
-        .fade-in-text { opacity: 0; animation: fadeIn 1s ease-out forwards; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        .jump-letters { display: inline-block; }
-        .jump-letters span { display: inline-block; animation: jump 0.5s ease-in-out infinite alternate; }
-        @keyframes jump { 0% { transform: translateY(0); } 100% { transform: translateY(-10px); } }
-        .jump-letters span:nth-child(1) { animation-delay: 0s; }
-        .jump-letters span:nth-child(2) { animation-delay: 0.1s; }
-        .jump-letters span:nth-child(3) { animation-delay: 0.2s; }
-        .jump-letters span:nth-child(4) { animation-delay: 0.3s; }
-        .jump-letters span:nth-child(5) { animation-delay: 0.4s; }
-        .jump-letters span:nth-child(6) { animation-delay: 0.5s; }
-        .jump-letters span:nth-child(7) { animation-delay: 0.6s; }
-        .jump-letters span:nth-child(8) { animation-delay: 0.7s; }
-        .jump-letters span:nth-child(9) { animation-delay: 0.8s; }
-        .jump-letters span:nth-child(10) { animation-delay: 0.9s; }
-        .jump-letters span:nth-child(11) { animation-delay: 1s; }
-        .typing-animation { display: inline-block; }
-        .typing-animation span { opacity: 0; }
-        @keyframes typeWriter { to { opacity: 1; } }
-        .cabecalho-producao h3 { font-size: 1.2rem; display: block; }
-    </style>
-</head>
-
-<body>
-    <header class="cabecalho-producao bg-info text-white py-4">
-        <div class="container text-center">
-            <h1 class="jump-letters" style="color: #ffffff;">
-                <span>A</span><span>G</span><span>R</span><span>I</span><span>N</span><span>H</span><span>O</span><span> </span><span>2</span><span>0</span><span>2</span><span>5</span>
-            </h1>
-            <h3 class="typing-animation">
-                <span>F</span><span>e</span><span></span><span>s</span><span>t</span><span>e</span><span>j</span><span>a</span><span>n</span><span>d</span><span></span><span>o</span> <span>a</span> <span>c</span><span>o</span><span>n</span><span>e</span><span>x</span><span>ã</span><span>o</span> <span>c</span><span>a</span><span>m</span><span>p</span><span>o</span> <span>e</span> <span>c</span><span>i</span><span>d</span><span>a</span><span>d</span><span>e</span>
-            </h3>
-        </div>
-    </header>
-
-    <nav class="navbar navbar-expand-lg bg-light shadow-sm">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-info" aria-current="page" href="index.html">Página Inicial</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-info" href="energia.html">Energia Rural</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-info" href="agua.html">Acessibilidade a Água</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-success fw-bold" href="producao.html">Produção</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <main class="container my-5">
-        <section class="row align-items-center mb-5">
-            <div class="col-md-6 text-center">
-                <img class="img-fluid rounded shadow-sm fade-in" src="./assets/image/farm-to-factory.png"
-                    alt="Imagem representando a conexão entre a produção rural e a industrialização.">
-            </div>
-            <div class="col-md-6">
-                <div>
-                    <h2 class="titulo-producao mb-3 slide-in-left">O Ciclo Produtivo: Do Campo à Indústria</h2>
-                    <p class="texto-producao lead slide-in-left" style="animation-delay: 0.2s;">
-                        A produção rural é a base para muitas indústrias nas cidades. A transformação de matérias-primas
-                        agrícolas em produtos acabados gera empregos, impulsiona a economia e conecta o trabalho do campo
-                        com a vida urbana.
-                    </p>
-                    <p class="texto-producao slide-in-left" style="animation-delay: 0.4s;">
-                        Este tema explora a diversidade da produção rural, os processos de industrialização que agregam
-                        valor aos produtos agrícolas e a importância da logística e da inovação para fortalecer essa
-                        cadeia produtiva essencial.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-4">
-            <h3 class="text-center mb-4 fade-in-text">A Dinâmica entre o Campo e a Indústria</h3>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col fade-in" style="animation-delay: 0.6s;">
-                    <div class="card h-100 shadow-sm border-info">
-                        <img src="./assets/image/agricultural-products.png" class="card-img-top img-card-producao"
-                            alt="Imagem de diversos produtos agrícolas.">
-                        <div class="card-body">
-                            <h5 class="card-title text-info">A Riqueza da Produção Rural</h5>
-                            <p class="card-text texto-producao-card">Variedade de culturas e criações que abastecem a
-                                indústria e a mesa dos consumidores nas cidades.</p>
-                            <a href="#" class="btn btn-outline-info btn-sm">Saiba Mais</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col fade-in" style="animation-delay: 0.8s;">
-                    <div class="card h-100 shadow-sm border-info">
-                        <img src="./assets/image/food-processing.png" class="card-img-top img-card-producao"
-                            alt="Imagem de uma indústria de processamento de alimentos.">
-                        <div class="card-body">
-                            <h5 class="card-title text-info">Industrialização e Valor Agregado</h5>
-                            <p class="card-text texto-producao-card">Processos industriais que transformam a produção
-                                rural, gerando novos produtos e oportunidades.</p>
-                            <a href="#" class="btn btn-outline-info btn-sm">Saiba Mais</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col fade-in" style="animation-delay: 1.0s;">
-                    <div class="card h-100 shadow-sm border-info">
-                        <img src="./assets/image/supply-chain.png" class="card-img-top img-card-producao"
-                            alt="Imagem de uma cadeia de suprimentos.">
-                        <div class="card-body">
-                            <h5 class="card-title text-info">Logística e Distribuição Eficiente</h5>
-                            <p class="card-text texto-producao-card">A importância da cadeia de suprimentos para levar os
-                                produtos do campo até a indústria e os centros urbanos.</p>
-                            <a href="#" class="btn btn-outline-info btn-sm">Saiba Mais</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer-producao bg-dark text-white py-3 mt-5">
-        <div class="text-center">
-            <p class="mb-0">&copy; 2025 AGRINHO - Festejando a Conexão Campo Cidade. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-        crossorigin="anonymous"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const fadeInElements = document.querySelectorAll('.fade-in');
-            fadeInElements.forEach(element => {
-                setTimeout(() => {
-                    element.classList.add('show');
-                }, 100);
-            });
-
-            const slideInLeftElements = document.querySelectorAll('.slide-in-left');
-            slideInLeftElements.forEach(element => {
-                setTimeout(() => {
-                    element.classList.add('show');
-                }, 100);
-            });
-
-            const slideInRightElements = document.querySelectorAll('.slide-in-right');
-            slideInRightElements.forEach(element => {
-                setTimeout(() => {
-                    element.classList.add('show');
-                }, 100);
-            });
-
-            const fadeInTextElements = document.querySelectorAll('.fade-in-text');
-            fadeInTextElements.forEach(element => {
-                element.classList.add('show');
-            });
-
-            // Animação de digitação para o subtítulo
-            const typingSubtitle = document.querySelector('.typing-animation');
-            if (typingSubtitle) {
-                const spansSubtitle = typingSubtitle.querySelectorAll('span');
-                spansSubtitle.forEach((span, index) => {
-                    span.style.animation = `typeWriter 0.09s ease-in-out forwards ${index * 0.03}s`;
-                });
-            }
-
-            // Animação de salto para o título principal
-            const jumpTitle = document.querySelector('.jump-letters');
-            // A animação do título já é controlada pelo CSS aplicado aos spans
-        });
-    </script>
-</body>
-
-</html>
+ </html>

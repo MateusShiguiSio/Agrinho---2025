@@ -2,245 +2,272 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Energia Conecta - AGRINHO 2025</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <link rel="stylesheet" href="energia.css">
-    <style>
-        .nav-link.active {
-            color: #7c8d1d !important; /* Mantendo o verde para a página ativa */
-        }
-        .fade-in {
-            opacity: 0;
-            transition: opacity 1s ease-out;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Energia Conecta - AGRINHO 2025</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+  <link rel="stylesheet" href="energia.css">
 
-        .fade-in.show {
-            opacity: 1;
-        }
-
-        .slide-in-left {
-            transform: translateX(-50px);
-            opacity: 0;
-            transition: transform 1s ease-out, opacity 1s ease-out;
-        }
-
-        .slide-in-left.show {
-            transform: translateX(0);
-            opacity: 1;
-        }
-
-        .fade-in-text {
-            opacity: 0;
-            animation: fadeIn 1s ease-out forwards;
-        }
-
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-
-            to {
-                opacity: 1;
-            }
-        }
-
-        .jump-letters {
-            display: inline-block;
-        }
-
-        .jump-letters span {
-            display: inline-block;
-            animation: jump 0.5s ease-in-out infinite alternate;
-        }
-
-        @keyframes jump {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-10px);
-            }
-        }
-
-        /* Adicionando delays individuais para um efeito mais interessante */
-        .jump-letters span:nth-child(1) { animation-delay: 0s; }
-        .jump-letters span:nth-child(2) { animation-delay: 0.1s; }
-        .jump-letters span:nth-child(3) { animation-delay: 0.2s; }
-        .jump-letters span:nth-child(4) { animation-delay: 0.3s; }
-        .jump-letters span:nth-child(5) { animation-delay: 0.4s; }
-        .jump-letters span:nth-child(6) { animation-delay: 0.5s; }
-        .jump-letters span:nth-child(7) { animation-delay: 0.6s; }
-        .jump-letters span:nth-child(8) { animation-delay: 0.7s; }
-        .jump-letters span:nth-child(9) { animation-delay: 0.8s; }
-        .jump-letters span:nth-child(10) { animation-delay: 0.9s; }
-        .jump-letters span:nth-child(11) { animation-delay: 1s; }
-
-        .cabecalho-energia h3 {
-            color: #e0f7fa; /* Um tom mais claro para o subtítulo */
-            font-size: 1.2rem;
-            display: block; /* Garante que o subtítulo fique em uma nova linha */
-        }
-
-        .typing-animation span {
-            opacity: 0;
-        }
-
-        @keyframes typeWriter {
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
 </head>
 
 <body>
-    <header class="cabecalho-energia bg-primary text-white py-4">
-        <div class="container text-center">
-            <h1 class="jump-letters">
-                <span>A</span><span>G</span><span>R</span><span>I</span><span>N</span><span>H</span><span>O</span> <span>2</span><span>0</span><span>2</span><span>5</span>
-            </h1>
-            <h3 class="typing-animation">
-                <span>F</span><span>e</span><span></span><span>s</span><span>t</span><span>e</span><span>j</span><span>a</span><span>n</span><span>d</span><span></span><span>o</span> <span>a</span> <span>c</span><span>o</span><span>n</span><span>e</span><span>x</span><span>ã</span><span>o</span> <span>c</span><span>a</span><span>m</span><span>p</span><span>o</span> <span>e</span> <span>c</span><span>i</span><span>d</span><span>a</span><span>d</span><span>e</span>
-            </h3>
+  <header class="cabecalho bg-warning text-dark py-4">
+  <div class="container text-center">
+   <h1 class="jump-letters h1p" style="color: #ffffff;">
+    <span>A</span><span>G</span><span>R</span><span>I</span><span>N</span><span>H</span><span>O</span><span>
+    </span> <span>2</span><span>0</span><span>2</span><span>5</span>
+   </h1>
+   <h3 class="typing-animation " style="animation-delay: 1s;">
+    <span>F</span><span>e</span><span></span><span>s</span><span>t</span><span>e</span><span>j</span><span>a</span><span>n</span><span>d</span><span>o</span>
+    <span>a</span> <span>c</span><span>o</span><span>n</span><span>e</span><span>x</span><span>ã</span><span>o</span>
+    <span>c</span><span>a</span><span>m</span><span>p</span><span>o</span> <span>e</span> <span>c</span><span>i</span><span>d</span><span>a</span><span>d</span><span>e</span>
+   </h3>
+  </div>
+  </div>
+ </header>
+
+ <nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <ul class="navbar-nav">
+     <li class="nav-item">
+      <a class="nav-link text-warning" href="index.html">Página Inicial</a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link active  text-success fw-bold" aria-current="page" href="energia.html">Energia Campo-Cidade</a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link text-warning" href="agua.html">Água: Elo Campo-Cidade</a>
+     </li>
+     <li class="nav-item">
+      <a class="nav-link text-warning" href="producao.html">Produção</a>
+     </li>
+    </ul>
+   </div>
+  </div>
+ </nav>
+  <main class="container my-5">
+    <section class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <div>
+          <h2 class="titulo-energia mb-3 slide-in-left">Energia: Um dos vínculos entre o Campo e a Cidade</h2>
+          <p class="texto-energia lead slide-in-left" style="animation-delay: 0.2s;">
+            A energia é o que move o crescimento do campo e da cidade. Ter uma estrutura de energia
+            boa e que dure é muito importante para unir o que se faz no campo e o que se precisa na cidade.
+          </p>
+          <p class="texto-energia slide-in-left" style="animation-delay: 0.4s;">
+            Esse assunto olha para as várias fontes de energia usadas no campo, as técnicas que ajudam a levar e dar acesso
+            à energia em lugares mais afastados,e como o uso combinado de energia ajuda a economia e a vida
+            das pessoas tanto no campo quanto na cidade.
+          </p>
         </div>
-    </header>
-    <nav class="navbar navbar-expand-lg bg-light shadow-sm">
-        <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-warning" aria-current="page" href="index.html">Página Inicial</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-success fw-bold" href="energia.html">Energia Rural</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-warning" href="agua.html">Acessibilidade a Água</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-warning" href="producao.html">Produção</a>
-                    </li>
-                </ul>
+      </div>
+      <div class="col-md-6 text-center">
+        <img class="img-fluid rounded shadow-sm fade-in" src="./assets/image/poste.png"
+          alt="Imagem de uma rede de energia conectando o campo e a cidade.">
+          <figcaption class="mt-2 text-muted" style="font-size: 0.9em; text-align: center;">
+            Poste elétrico, condutor e a base para a rede elétrica.
+           </figcaption>
+      </div>
+    </section>
+
+    <section class="row mb-4">
+      <h3 class="titulo-destaques mb-4 fade-in-text">=======⚡ Turbinas Eólicas ⚡=======</h3>
+      <div class="col-md-6">
+        <h3 class="text-center mb-4 fade-in-text pt-5">Descobrindo mais sobre a energia eólica</h3>
+        <div class="fade-in" style="animation-delay: 0.8s;">
+          <div class="card h-100 shadow-sm border-warning">
+            <img src="./assets/image/cata-vento.png" class="card-img-top img-card-energia"
+              alt="Imagem de turbinas eólicas em uma paisagem rural.">
+              <figcaption class="mt-2 text-muted" style="font-size: 0.9em; text-align: center;">
+                Turbina eólica.
+               </figcaption>
+            <div class="card-body">
+              <h5 class="card-title text-warning text-center">Mais sobre energia eólica</h5>
+              <p class="card-text texto-energia-card text-center">Explorar a energia eólica pode trazer energia limpa para o campo e a cidade, além de impulsionar a capacidade da nossa rede elétrica.</p>
+              <div class="d-grid">
+                <a href="https://www.portalsolar.com.br/energia-eolica" class="btn btn-outline-warning btn-sm mt-3" target="_blank">Saiba
+                  Mais</a>
+              </div>
             </div>
+          </div>
         </div>
-    </nav>
-
-    <main class="container my-5">
-        <section class="row align-items-center mb-5">
-            <div class="col-md-6 text-center">
-                <img class="img-fluid rounded shadow-sm fade-in" src="./assets/image/power-grid.png"
-                    alt="Imagem de uma rede de energia conectando o campo e a cidade.">
-            </div>
-            <div class="col-md-6">
-                <div>
-                    <h2 class="titulo-energia mb-3 slide-in-left">Energia: O Elo entre o Campo e a Cidade</h2>
-                    <p class="texto-energia lead slide-in-left" style="animation-delay: 0.2s;">
-                        A energia é a força motriz que impulsiona tanto o desenvolvimento rural quanto o urbano. A
-                        infraestrutura energética eficiente e sustentável é fundamental para conectar a produção do campo
-                        com as necessidades da cidade.
-                    </p>
-                    <p class="texto-energia slide-in-left" style="animation-delay: 0.4s;">
-                        Este tema explora as diversas fontes de energia utilizadas no campo, as tecnologias que facilitam
-                        a distribuição e o acesso à energia em áreas rurais, e como a integração energética fortalece a
-                        economia e a qualidade de vida em ambos os ambientes.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-4">
-            <h3 class="text-center mb-4 fade-in-text">Descobrindo a Energia que Une Campo e Cidade</h3>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <div class="col fade-in" style="animation-delay: 0.6s;">
-                    <div class="card h-100 shadow-sm border-warning">
-                        <img src="./assets/image/solar-panel.png" class="card-img-top img-card-energia"
-                            alt="Imagem de painéis solares no campo.">
-                        <div class="card-body">
-                            <h5 class="card-title text-warning">Energia Solar no Campo</h5>
-                            <p class="card-text texto-energia-card">Aproveitamento da energia solar para atividades
-                                agrícolas, geração distribuída e autonomia energética nas áreas rurais.</p>
-                            <a href="#" class="btn btn-outline-warning btn-sm">Saiba Mais</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col fade-in" style="animation-delay: 0.8s;">
-                    <div class="card h-100 shadow-sm border-warning">
-                        <img src="./assets/image/wind-turbine.png" class="card-img-top img-card-energia"
-                            alt="Imagem de turbinas eólicas em uma paisagem rural.">
-                        <div class="card-body">
-                            <h5 class="card-title text-warning">Energia Eólica e o Agronegócio</h5>
-                            <p class="card-text texto-energia-card">O potencial da energia eólica para fornecer energia
-                                limpa para as propriedades rurais e contribuir para a rede elétrica.</p>
-                            <a href="#" class="btn btn-outline-warning btn-sm">Saiba Mais</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col fade-in" style="animation-delay: 1.0s;">
-                    <div class="card h-100 shadow-sm border-warning">
-                        <img src="./assets/image/smart-grid.png" class="card-img-top img-card-energia"
-                            alt="Imagem de uma rede de energia inteligente.">
-                        <div class="card-body">
-                            <h5 class="card-title text-warning">Redes Inteligentes e Conexão Energética</h5>
-                            <p class="card-text texto-energia-card">A importância das redes inteligentes para otimizar a
-                                distribuição de energia entre o campo e a cidade, reduzindo perdas e aumentando a
-                                eficiência.</p>
-                            <a href="#" class="btn btn-outline-warning btn-sm">Saiba Mais</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer-energia bg-dark text-white py-3 mt-5">
-        <div class="text-center">
-            <p class="mb-0">&copy; 2025 AGRINHO - Festejando a Conexão Campo Cidade. Todos os direitos reservados.</p>
+        <div class="mt-4 fade-in" style="animation-delay: 1.2s;">
+          <img src="assets/image/horizonte.png" alt="Imagem a ser adicionada" class="horizonte img-fluid rounded shadow-sm">
+          <figcaption class="mt-2 text-muted" style="font-size: 0.9em; text-align: center;">
+            Campo ao horizonte, visto da cidade.
+           </figcaption>
         </div>
-    </footer>
+      </div>
+      <div class="col-md-6 text-center pt-5">
+        <h1> Energia Eólica</h1>
+        <p class="texto-energia">
+          A energia eólica é uma fonte de energia renovável que utiliza a força do vento para gerar eletricidade.
+          Grandes turbinas eólicas, como as mostradas na imagem abaixo, são instaladas em áreas com ventos
+          constantes, transformando a energia cinética do vento em energia mecânica, que por sua vez é convertida
+          em eletricidade por um gerador.
+        </p>
+        <div class="text-center my-3">
+          <img src="./assets/image/eolicas.png" alt="Parque eólico" class="img-fluid rounded shadow-sm"
+            style="max-width: 300px;">
+            <figcaption class="mt-2 text-muted" style="font-size: 0.9em; text-align: center;">
+              Turbinas eólicas nas divisas entre Paraná e Santa Catarina.
+             </figcaption>
+        </div>
+        <p class="texto-energia">
+          Esta nova forma de fazer energia vem sendo uma ótima escolha em vez de usar combustíveis fósseis.
+          Ela ajuda a cortar o lançamento de gases do efeito estufa e traz mais opções para a energia para usarmos.
+          Onde são implantados esse tipo de energia, pode trazer força para o trabalho,
+          e também pode gerar renda para quem possui a terra onde os grandes moinhos de vento ficam.</p>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const fadeInElements = document.querySelectorAll('.fade-in');
-            fadeInElements.forEach(element => {
-                setTimeout(() => {
-                    element.classList.add('show');
-                }, 100);
-            });
+        <p class="texto-energia"> Juntar essa energia do vento com outras limpas e com a rede elétrica é crucial e sustentável sendo muito importante.
+          Isso faz com que todos os habitantes urbanos e rurais tenham acesso energia renovável e duradoura, conectando o campo e a cidade.
+        </p>
+      </div>
+    </section>
+  <h3 class="titulo-destaques mb-4 fade-in-text">=====💦 Usinas Hidrelétricas 💦=====</h3>
+  <section class="row mb-4 align-items-center">
+    <div class="textinho col-md-6 text-center pt-5">
+      <h1> Energia Hidrelétrica</h1>
+      <p class="texto-energias">
+        A energia hidrelétrica utiliza o fluxo da água para gerar eletricidade.  Barragens são construídas para controlar o fluxo dos rios, e a água liberada gira turbinas conectadas a geradores, produzindo energia elétrica.
+      </p>
+      <div class="text-center my-3">
+        <img src="./assets/image/hidrelétrica.png" alt="Usina hidrelétrica" class="img-fluid rounded shadow-sm"
+          style="max-width: 450px;">
+          <figcaption class="mt-2 text-muted" style="font-size: 0.9em; text-align: center;">
+            Usina Hidrelétrica de Salto Santiago junto com um exemplar de turbina hidrelétrica.
+           </figcaption>
+      </div>
+      <p class="texto-energias">
+        Esta é uma das fontes enérgicas mais usadas no Brasil, ajudando muito com a nossa matriz energética. Além de dar luz, as represas também têm outros usos, como parar cheias e irrigar o solo local. Essa utilidade faz da energia das águas um ponto muito importante tanto no campo, para plantar e irrigar, quanto nas cidades, que precisam de luz para o funcionamento.
 
-            const slideInLeftElements = document.querySelectorAll('.slide-in-left');
-            slideInLeftElements.forEach(element => {
-                setTimeout(() => {
-                    element.classList.add('show');
-                }, 100);
-            });
+      </p>
+      <p class="texto-energia">
+        Unir a força da água com outras, como a do vento e do sol, é chave para ter um apoio de energia renovável e diversificada. Essa diversificação de várias fontes que faz com que a energia seja mais sustentável e menos poluidora, tornando até menos dependente de condições climáticas específicas, beneficiando a todos com uma energia limpa e constante.
+      </p>
+    </div>
+    <div class="col-md-6">
+      <h3 class="text-center mb-4 fade-in-text pt-5">Descobrindo mais sobre a energia hidrelétrica</h3>
+      <div class="fade-in" style="animation-delay: 0.8s;">
+        <div class="u card h-100 w-75 shadow-sm border-primary">
+          <img src="./assets/image/itaipu.png" class="card-img-top img-card-energia"
+            alt="Imagem de uma barragem hidrelétrica.">
+            <figcaption class="mt-2 text-muted" style="font-size: 0.9em; text-align: center;">
+              Usina Hidrelétrica de Itaipu.
+             </figcaption>
+          <div class="card-body">
+            <h5 class="card-title text-primary text-center">Mais sobre energia hidrelétrica</h5>
+            <p class="card-text texto-energia-card text-center">Entenda como a força cinética da água se transforma em energia elétrica, uma das principais fontes elétricas do Brasil.</p>
+            <div class="d-grid">
+              <a href="https://brasilescola.uol.com.br/geografia/energia-hidreletrica.htm" class="btn btn-outline-primary btn-sm mt-3" target="_blank">Saiba
+                Mais</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 fade-in" style="animation-delay: 1.2s;">
+        <img src="assets/image/usina.png" alt="Imagem de um rio" class="rio img-fluid rounded shadow-sm">
+        <figcaption class="mt-2 text-muted" style="font-size: 0.9em; text-align: center;">
+          Usina Hidrelétrica de Salto Santiago.
+         </figcaption>
+      </div>
+    </div>
+  </section>
+  <h3 class="titulo-destaques mb-4 fade-in-text">=====☀️ Painel Solar ☀️=====</h3>
+<section class="row mb-4 align-items-center">
+  <div class="col-md-6">
+    <h3 class="ur text-center mb-4 fade-in-text pt-5">Descobrindo mais sobre a energia solar</h3>
+    <div class="fade-in" style="animation-delay: 0.8s;">
+      <div class="u card h-100 w-75 shadow-sm border-warning">
+        <img src="./assets/image/solzin.png" class="card-img-top img-card-energia"
+          alt="Imagem de painéis solares.">
+          <figcaption class="mt-2 text-muted" style="font-size: 0.9em; text-align: center;">
+            Imagem de um por do sol.
+           </figcaption>
+        <div class="card-body">
+          <h5 class="card-title text-warning text-center">Mais sobre energia solar</h5>
+          <p class="card-text texto-energia-card text-center">Veja como a luz do sol pode ser transformada em eletricidade limpa para o campo e a cidade.</p>
+          <div class="d-grid">
+            <a href="https://www.portalsolar.com.br/o-que-e-energia-solar.html" class="btn btn-outline-warning btn-sm mt-3" target="_blank">Saiba
+              Mais</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="textinhos col-md-6 text-center pt-5">
+    <h1> Energia Solar</h1>
+    <p class="texto-energias">
+      A energia solar usa a luz do sol para produzir eletricidade. Placas solares, feitas de materiais especiais, captam a luz do sol e a transformam diretamente em energia elétrica.
+    </p>
+    <div class="text-center my-3">
+      <img src="./assets/image/painel solar.png" alt="Painéis solares em área rural" class="img-fluid rounded shadow-sm"
+        style="max-width: 350px;">
+        <figcaption class="mt-2 text-muted" style="font-size: 0.9em;">
+          Painéis solares instalados em uma propriedade rural.
+         </figcaption>
+    </div>
+    <p class="texto-energias">
+      Essa forma de energia está crescendo muito, tanto nas cidades, em casas e prédios, quanto no campo, em fazendas para diversas atividades como irrigação e iluminação. Usar o sol para gerar energia é uma maneira limpa e renovável de ajudar o meio ambiente e economizar a longo prazo.
+    </p>
+    <p class="texto-energia">
+      Combinar a energia do sol com outras fontes limpas, como a eólica e a hidrelétrica, fortalece ainda mais nosso sistema de energia, tornando-o mais seguro e sustentável para todos, conectando o progresso do campo com as necessidades da cidade.
+    </p>
+  </div>
+</section>
+<div class="text-center mt-5">
+  <h3 style="color: #dfc00f;">Para subir ao topo:</h3>
+  <a href="#" class="btn btn-outline-warning btn-sm mt-2">Aperte aqui para ir até a Barra de Navegação</a>
+</div>
+  </main>
 
-            const fadeInTextElements = document.querySelectorAll('.fade-in-text');
-            fadeInTextElements.forEach(element => {
-                element.classList.add('show');
-            });
+  <footer class="footer-energia bg-dark text-white py-3 mt-5">
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 AGRINHO - Festejando a Conexão Campo Cidade. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
-            // Animação de digitação para o subtítulo (mais rápido)
-            const typingSubtitle = document.querySelector('.typing-animation');
-            if (typingSubtitle) {
-                const spansSubtitle = typingSubtitle.querySelectorAll('span');
-                spansSubtitle.forEach((span, index) => {
-                    span.style.animation = `typeWriter 0.09s ease-in-out forwards ${index * 0.03}s`;
-                });
-            }
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const fadeInElements = document.querySelectorAll('.fade-in');
+      fadeInElements.forEach(element => {
+        setTimeout(() => {
+          element.classList.add('show');
+        }, 100);
+      });
 
-            // Animação de salto para o título principal
-            const jumpTitle = document.querySelector('.jump-letters');
-            // A animação do título já é controlada pelo CSS aplicado aos spans
+      const slideInLeftElements = document.querySelectorAll('.slide-in-left');
+      slideInLeftElements.forEach(element => {
+        setTimeout(() => {
+          element.classList.add('show');
+        }, 100);
+      });
+
+      const fadeInTextElements = document.querySelectorAll('.fade-in-text');
+      fadeInTextElements.forEach(element => {
+        element.classList.add('show');
+      });
+
+      // Animação de digitação para o subtítulo (mais rápido)
+      const typingSubtitle = document.querySelector('.typing-animation');
+      if (typingSubtitle) {
+        const spansSubtitle = typingSubtitle.querySelectorAll('span');
+        spansSubtitle.forEach((span, index) => {
+          span.style.animation = `typeWriter 0.09s ease-in-out forwards ${index * 0.03}s`;
         });
-    </script>
+      }
+
+      // Animação de salto para o título principal
+      const jumpTitle = document.querySelector('.jump-letters');
+      // A animação do título já é controlada pelo CSS aplicado aos spans
+    });
+  </script>
 </body>
 
 </html>

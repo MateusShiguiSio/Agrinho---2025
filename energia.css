@@ -2,141 +2,273 @@ body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9fbe7; /* Um tom de fundo levemente amarelado */
+    background-color: #f9fbe7;
     color: #424242;
     line-height: 1.6;
-}
-
-.cabecalho-energia {
-    background-color: #202020 !important; /* Amarelo vibrante para energia */
+   }
+  
+   .cabecalho { /* Usando a classe 'cabecalho' do index.html */
+    height: 220px;
+    background-color: #202020 !important;
     padding: 2rem 0;
     margin-bottom: 2rem;
-}
-
-.cabecalho-energia h1 {
-    font-size: 2.5rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-width: 3px;
+    border-style: solid;
+    border-color: #e0a800; /* Cor da borda tema energia */
+   }
+  
+   .cabecalho h1 {
+    font-size: 90px;
     font-weight: bold;
     margin-bottom: 0.5rem;
-    color:#f8f9fa
-}
-
-.cabecalho-energia h3 {
-    color: #b9b9b9; /* Cor escura para contraste no amarelo */
+    color: #ebe9e9; /* Cor do texto do título */
+   }
+  
+   .cabecalho h3 {
+    color: #e7e5e5; /* Cor do texto do subtítulo */
+    font-size: 1.5rem;
+    font-style: normal;
+    text-shadow: 3px 5px 5px #000000;
+   }
+  
+   .navbar {
+    margin-top: 40px;
+    background-color: rgba(226, 169, 0, 0.17) !important; /* Cor de fundo da navbar tema energia (transparente) */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+   }
+  
+   .navbar-nav .nav-link {
+    font-size: 18px;
+    padding: 18px;
+    margin-left: 30px;
+    font-weight: bold !important;
+    color: #e0a800 !important; /* Cor dos links da navbar tema energia */
+   }
+  
+   .navbar-nav .nav-link:hover {
+    font-weight: bold !important;
+    color: #b6901d !important;
+   }
+  
+   .navbar-nav .nav-link.active {
+    font-weight: bold !important;
+    color: #b99015 !important;
+   }
+   .fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+   }
+  
+   .fade-in.show {
+    opacity: 1;
+   }
+  
+   .slide-in-left {
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+   }
+  
+   .slide-in-left.show {
+    transform: translateX(0);
+    opacity: 1;
+   }
+  
+   .fade-in-text {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+   }
+  
+   @keyframes fadeIn {
+    from {
+     opacity: 0;
+    }
+  
+    to {
+     opacity: 1;
+    }
+   }
+  
+   .jump-letters {
+    display: inline-block;
+   }
+  
+   .jump-letters span {
+    font-size: 90px;
+    display: inline-block;
+    animation: jump 0.5s ease-in-out infinite alternate;
+    text-shadow: 5px 10px 5px #000000b9;
+   }
+  
+   @keyframes jump {
+    0% {
+     transform: translateY(0);
+    }
+  
+    100% {
+     transform: translateY(-10px);
+    }
+   }
+  
+   .jump-letters span:nth-child(1) {
+    animation-delay: 0s;
+   }
+  
+   .jump-letters span:nth-child(2) {
+    animation-delay: 0.1s;
+   }
+  
+   .jump-letters span:nth-child(3) {
+    animation-delay: 0.2s;
+   }
+  
+   .jump-letters span:nth-child(4) {
+    animation-delay: 0.3s;
+   }
+  
+   .jump-letters span:nth-child(5) {
+    animation-delay: 0.4s;
+   }
+  
+   .jump-letters span:nth-child(6) {
+    animation-delay: 0.5s;
+   }
+  
+   .jump-letters span:nth-child(7) {
+    animation-delay: 0.6s;
+   }
+  
+   .jump-letters span:nth-child(8) {
+    animation-delay: 0.7s;
+   }
+  
+   .jump-letters span:nth-child(9) {
+    animation-delay: 0.8s;
+   }
+  
+   .jump-letters span:nth-child(10) {
+    animation-delay: 0.9s;
+   }
+  
+   .jump-letters span:nth-child(11) {
+    animation-delay: 1s;
+   }
+  
+   .cabecalho-energia h3 {
+    color: #e0f7fa;
     font-size: 1.2rem;
-}
-
-.navbar {
-    background-color: #fff8e1 !important; /* Amarelo bem claro para a navegação */
-}
-
-.nav-link {
-    padding: 0.8rem 1.2rem !important;
-    transition: color 0.3s ease;
-}
-
-.nav-link:hover {
-    color: #e0a800 !important;
-}
-
-.nav-link.active {
-    color: #FFC107 !important; /* Amarelo escuro para o link ativo */
-}
-
-.titulo-energia {
-    color: #ff9800; /* Laranja para complementar o amarelo */
+    display: block;
+   }
+  
+   .typing-animation span {
+    opacity: 0;
+   }
+  
+   @keyframes typeWriter {
+    to {
+     opacity: 1;
+    }
+   }
+  
+   .titulo-energia {
+    color: #ff9800;
     font-size: 2.2rem;
     font-weight: bold;
     margin-bottom: 1.5rem;
-}
-
-.texto-energia {
+   }
+  
+   .texto-energias {
+    margin-left: 30px;
     font-size: 1.1rem;
     color: #555;
-}
+   }
 
-.img-fluid {
+   .texto-energia {
+    font-size: 1.1rem;
+    color: #555;
+   }
+  
+   .img-fluid {
     max-width: 100%;
-    height: auto;
-}
-
-.img-card-energia {
-    max-height: 180px;
+    height: 25%;
+   }
+  
+   .img-card-energia {
+    max-height: 300px;
     object-fit: cover;
     border-radius: 0.5rem 0.5rem 0 0;
-}
-
-.texto-energia-card {
+   }
+  
+   .card .card-body {
+    align-items: center;
+    text-align: center;
+   }
+  
+   .card .card-body .btn.btn-sm {
+    font-size: 1rem;
+    padding: 0.5rem 7rem;
+   }
+  
+   .texto-energia-card {
     font-size: 0.95rem;
     color: #666;
-}
-
-.carousel-item {
-    max-height: 500px;
-    overflow: hidden;
-    background-color: #ddd; /* Para evitar flashes brancos durante a transição */
-}
-
-.img-slide-energia {
+   }
+  
+   .img-slide-energia {
     width: 100%;
     height: auto;
     object-fit: cover;
     max-height: 500px;
-}
+   }
+  
+   .horizonte{
+    margin-left: 70px;
+    height: 500px;
+    width: 500px;
+   }
 
-.carousel-caption {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 1rem;
-    border-radius: 0.5rem;
-}
+   .titulo-destaques{
+    margin-top: 80px;
+    text-align: center;
+    width: 1300px;
+    font-size: 70px;
+    margin-bottom: 20px;
+    color: #424242 !important;
+    } 
 
-.carousel-caption h5 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-}
+    .textinho {
+    margin-top: -150px;
+    }
 
-.carousel-caption p {
-    font-size: 1rem;
-}
+    .textinhos {
+        margin-top: 20px;
+        }
 
-.footer-energia {
+    .card {
+    margin-right: 30px;
+    margin-left: 40px;
+    }
+
+    .ur {
+        margin-top: -200px;
+        margin-right: 30px;
+        margin-left: 60px;
+        }
+
+
+    .u {
+        margin-right: 30px;
+        margin-left: 90px;
+        }
+
+    .rio {
+    width: 600px;
+    }
+
+   .footer-energia {
     padding: 1.5rem 0;
     text-align: center;
     color: #f8f9fa;
-}
-.jump-letters {
-    display: inline-block;
-}
-
-.jump-letters span {
-    display: inline-block;
-    animation: jump 0.5s ease-in-out infinite alternate;
-}
-
-@keyframes jump {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-10px);
-    }
-}
-
-/* Adicionando delays individuais para um efeito mais interessante */
-.jump-letters span:nth-child(1) { animation-delay: 0s; }
-.jump-letters span:nth-child(2) { animation-delay: 0.1s; }
-.jump-letters span:nth-child(3) { animation-delay: 0.2s; }
-.jump-letters span:nth-child(4) { animation-delay: 0.3s; }
-.jump-letters span:nth-child(5) { animation-delay: 0.4s; }
-.jump-letters span:nth-child(6) { animation-delay: 0.5s; }
-.jump-letters span:nth-child(7) { animation-delay: 0.6s; }
-.jump-letters span:nth-child(8) { animation-delay: 0.7s; }
-.jump-letters span:nth-child(9) { animation-delay: 0.8s; }
-.jump-letters span:nth-child(10) { animation-delay: 0.9s; }
-.jump-letters span:nth-child(11) { animation-delay: 1s; }
-
-.cabecalho-energia h3 {
-    color: #e0f7fa; /* Um tom mais claro para o subtítulo */
-    font-size: 1.2rem;
-    display: block; /* Garante que o subtítulo fique em uma nova linha */
-}
+   }
