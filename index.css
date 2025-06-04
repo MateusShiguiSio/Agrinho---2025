@@ -54,7 +54,7 @@ body {
 
 .titulo-destaque{
     text-decoration: underline;
-    margin-left: 100px;
+    margin-left: 150px;
     text-align: center;
     width: 350px;
     font-size: 50px;
@@ -70,6 +70,7 @@ body {
 } 
 
 .texto-estiloso {
+    font-size: 20px;
     margin-left: 20px;
     text-align: center;
 }
@@ -236,3 +237,144 @@ height: 500px;
     height: 500px !important;
     object-fit: cover; /* Para manter a proporção e cobrir o espaço */
    }
+/* --- Animações Padrão (necessárias para o funcionamento) --- */
+
+/* Keyframes para Títulos Saltitantes (Bounce) */
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1; /* Garante que o elemento termine visível */
+    }
+}
+
+/* Keyframes para Textos Pulando (Bounce In Text) */
+@keyframes bounceInText {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+    70% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1; /* Garante que o elemento termine visível */
+    }
+}
+
+/* Keyframes para Fade-in genérico */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Keyframes para Títulos e Elementos Fading In e Escalando */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* --- Aplicação das Animações aos Elementos da Página Inicial --- */
+
+/* Títulos Principais de Seção (como "Descobrindo o AGRINHO PARANÁ" e "Campo e Cidade") */
+.titulo-destaques {
+    opacity: 0; /* Começa invisível */
+    animation: bounceIn 1s ease-out forwards;
+    animation-delay: 0.5s; /* Atraso inicial */
+}
+
+/* Títulos Menores (como "A Essência da Zona Rural" e "A Essência das Áreas Urbanas") */
+.titulo-destaque {
+    opacity: 0; /* Começa invisível */
+    animation: bounceIn 1s ease-out forwards;
+    animation-delay: 0.8s; /* Atraso para aparecer depois dos títulos principais */
+}
+
+/* Textos Principais com Animação de Salto */
+.texto-estiloso {
+    opacity: 0; /* Começa invisível */
+    animation: bounceInText 1s ease-out forwards;
+    animation-delay: 1.2s; /* Atraso para aparecer depois dos títulos */
+}
+
+/* Ajustes de Atraso para Parágrafos Específicos */
+/* Para os parágrafos que já possuem `slide-in-left` no HTML, ajustamos o delay */
+.texto-estiloso.slide-in-left {
+    animation-delay: 1s; /* Valor base, ajuste conforme necessário */
+}
+
+.texto-estiloso.slide-in-left[style*="animation-delay: 0.6s"] {
+    animation-delay: 1s !important; /* Sobrescreve o delay do HTML */
+}
+
+.texto-estiloso.slide-in-left[style*="animation-delay: 0.8s"] {
+    animation-delay: 1s !important; /* Sobrescreve o delay do HTML */
+}
+
+.texto-estiloso.slide-in-left[style*="animation-delay: 0.9s"] {
+    animation-delay: 1s !important; /* Sobrescreve o delay do HTML */
+}
+
+
+/* Todas as Imagens (img-fluid) com Fade-in */
+.img-fluid {
+    opacity: 0; /* Começa invisível */
+    animation: fadeIn 1s ease-out forwards; /* Aplica a animação de fade-in */
+    animation-delay: 0.7s; /* Um pequeno atraso para aparecer depois do título principal */
+}
+
+/* Imagens do Carrossel com Fade-in */
+/* O carrossel já tem `.fade-in`, então vamos garantir que ele use a animação e permaneça */
+.carousel-item.fade-in {
+    opacity: 0; /* Começa invisível para a animação */
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 2.0s; /* Atraso para o carrossel aparecer após os textos */
+}
+
+/* --- Desativando o controle de opacidade e transformações do JavaScript para as classes afetadas --- */
+/* Isso é crucial para que as animações CSS tenham prioridade e os elementos não "sumam" ou resetem */
+.fade-in, .slide-in-left, .fade-in-text {
+    opacity: 0; /* Começa invisível, mas o CSS controla a animação */
+    transform: none; /* Reseta qualquer transformação inicial para o CSS controlar */
+    transition: none !important; /* Desativa transições do JS para que a animação CSS assuma */
+}
+
+/* Garante que o JavaScript não sobrescreva a opacidade final das animações CSS */
+.fade-in.show,
+.slide-in-left.show,
+.fade-in-text.show {
+    opacity: 1 !important; /* Força a opacidade 1 para elementos "mostrados" pelo JS, mas que o CSS anima */
+    transform: none !important; /* Remove transformações que o JS possa adicionar, deixando para o CSS */
+}
+
+/* Opcional: Para o footer, se quiser um fade-in no final */
+.footer {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    animation-delay: 2.5s; /* Atraso para o footer aparecer no final */
+}
