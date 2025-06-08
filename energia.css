@@ -46,7 +46,6 @@ body {
 .nav-link {
     font-weight: bold !important;
     color: #198754 !important; /* Cor do link normal igual ao index */
-    padding: 0.8rem 1.2rem !important; /* Mantido, boa prática */
     transition: color 0.3s ease; /* Mantido, boa prática */
     margin-right: 20px; /* Adicionado para consistência */
     padding: 15px; /* Adicionado para consistência */
@@ -185,6 +184,26 @@ text-align: center;
     animation: fadeIn 1s ease-out forwards;
     color: #0d8529; /* Cor do texto de fade-in para verde */
 }
+
+/* Animation Keyframes */
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%); /* Start completely off to the right */
+      opacity: 0; /* Start completely transparent */
+    }
+    100% {
+      transform: translateX(0); /* End at its original position */
+      opacity: 1; /* End fully opaque */
+    }
+  }
+  
+  /* Apply the animation to the navbar */
+  .navbar-slide-in {
+    animation: slideInFromRight 1s ease-out forwards; /* 1s duration, ease-out timing, keep final state */
+    /* Initially hide the navbar to prevent flicker before animation */
+    transform: translateX(100%);
+    opacity: 0;
+  }
 
 @keyframes fadeIn {
     from {
