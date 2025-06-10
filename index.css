@@ -32,6 +32,16 @@ body {
     text-shadow: 3px 5px 5px #000000;
 }
 
+/* --- Media Queries para Ajustes de Fontes no Cabeçalho --- */
+@media (max-width: 768px) {
+    .cabecalho h1 {
+        font-size: 2rem; /* Reduz o tamanho da fonte em telas menores */
+    }
+    .cabecalho h3 {
+        font-size: 1rem; /* Reduz o tamanho da fonte em telas menores */
+    }
+}
+
 .navbar {
     background-color: rgba(212, 237, 218, 0.7) !important; /* Fundo verde claro mais transparente */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -39,40 +49,75 @@ body {
 
 .navbar-nav .nav-link {
     font-weight: bold !important; /* Texto em negrito */
-    color: #29c44d !important; /* Texto verde escuro para os links da navbar */
-}
-
-.navbar-nav .nav-link:hover {
+    color: #21874c  !important; /* Texto verde escuro para os links da navbar */
+ }
+ 
+ .navbar-nav .nav-link:hover {
     font-weight: bold !important; /* Texto em negrito ao passar o mouse */
-    color: #28a846 !important; /* Texto verde mais escuro ao passar o mouse */
-}
-
-.navbar-nav .nav-link.active {
+    color: #1c6c2f !important; /* Texto verde mais escuro ao passar o mouse */
+ }
+ 
+ .navbar-nav .nav-link.active {
     font-weight: bold !important; /* Texto em negrito no link ativo */
-    color: #198754 !important; /* Verde mais vibrante para o link ativo */
-}
+    color: #185d28 !important; /* Verde mais vibrante para o link ativo */
+ }
 
-.titulo-destaque{
+/* --- Ajustes de Responsividade para Títulos Principais e de Seção --- */
+.titulo-destaque {
     text-decoration: underline;
-    margin-left: 150px;
+    /* ALTERADO: Removido margin-left fixo e width fixo para responsividade */
+    margin-left: auto; /* Centraliza o elemento */
+    margin-right: auto; /* Centraliza o elemento */
     text-align: center;
-    width: 350px;
-    font-size: 50px;
+    max-width: 90%; /* Limita a largura máxima para se ajustar à tela */
+    font-size: 3rem; /* Ajustado para REM para responsividade */
     margin-bottom: 20px;
 }
 
-.titulo-destaques{
+.titulo-destaques {
     text-align: center;
-    width: 1150px;
-    font-size: 70px;
+    /* ALTERADO: Removido width fixo para responsividade */
+    margin-left: auto; /* Centraliza o elemento */
+    margin-right: auto; /* Centraliza o elemento */
+    max-width: 95%; /* Limita a largura máxima para se ajustar à tela */
+    font-size: 4.5rem; /* Ajustado para REM para responsividade */
     margin-bottom: 20px;
     color: #424242 !important;
-} 
+}
+
+/* --- Media Queries para Títulos (ajuste de tamanho em telas menores) --- */
+@media (max-width: 992px) { /* Dispositivos médios (tablets) */
+    .titulo-destaque {
+        font-size: 2.5rem;
+    }
+    .titulo-destaques {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 768px) { /* Dispositivos pequenos (celulares) */
+    .titulo-destaque {
+        font-size: 2rem;
+    }
+    .titulo-destaques {
+        font-size: 2.5rem;
+    }
+    .jump-letters span { /* Reduz o tamanho da fonte das letras saltitantes em mobile */
+        font-size: 50px;
+    }
+}
 
 .texto-estiloso {
-    font-size: 20px;
-    margin-left: 20px;
-    text-align: center;
+    font-size: 1.25rem; /* Ajustado para REM para responsividade */
+    /* REMOVIDO: margin-left: 20px; para evitar quebras em telas pequenas */
+    padding: 0 15px; /* Adiciona padding horizontal para o texto não encostar nas bordas */
+    text-align: justify; /* Altera para justificado, melhora a leitura */
+}
+
+@media (max-width: 768px) {
+    .texto-estiloso {
+        font-size: 1rem; /* Reduz o tamanho da fonte em telas menores */
+    }
 }
 
 .card-body h5 {
@@ -83,10 +128,19 @@ body {
     border-radius: 15px;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
+    max-width: 100%; /* GARANTIDO: Imagens são responsivas */
+    height: auto; /* GARANTIDO: Mantém a proporção */
+    display: block; /* Para permitir centralização com margin auto se estiver sozinha */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .image-fluids {
-height: 100px;
+    height: auto; /* ALTERADO: Para altura automática, garantindo proporção */
+    max-width: 100%; /* GARANTIDO: Imagens são responsivas */
+    display: block; /* Para permitir centralização com margin auto */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .img-card-custom {
@@ -95,12 +149,14 @@ height: 100px;
     border-radius: 0.5rem 0.5rem 0 0; /* Arredondamento dos cards de energia */
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.08);
     transition: transform 0.2s ease-in-out;
-    width: 100%;
+    width: 100%; /* GARANTIDO: Ocupa a largura total do card */
+    height: auto; /* GARANTIDO: Mantém a proporção da imagem dentro do card */
 }
 
 .img-card-custom:hover {
     transform: scale(1.01);
 }
+
 .card {
     border: none;
     border-radius: 10px;
@@ -126,32 +182,30 @@ height: 100px;
     color: white;
 }
 
-.navbar {
-    background-color: rgba(212, 237, 218, 0.7) !important; /* Fundo verde claro mais transparente */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+/* --- Ajustes de Responsividade para o Carrossel --- */
+.carousel {
+    margin: 20px auto;
+    /* ALTERADO: Removido width e height fixos. Usar max-width para responsividade */
+    max-width: 100%; /* Garante que o carrossel nunca ultrapasse a largura do contêiner pai */
+    height: auto; /* Altura se adapta ao conteúdo (imagens responsivas) */
 }
 
-.navbar-nav .nav-link {
-    font-weight: bold !important; /* Texto em negrito */
-    color: #198754 !important; /* Texto verde escuro para os links da navbar */
-    margin-right: 20px;
-    padding: 15px;
+.fixed-size-carousel-image {
+    width: 100% !important; /* GARANTIDO: Imagem ocupa 100% da largura do item do carrossel */
+    height: 500px !important; /* Altura fixa para desktop (ajustada para mobile abaixo) */
+    object-fit: cover; /* Para manter a proporção e cobrir o espaço */
 }
 
-.navbar-nav .nav-link:hover {
-    font-weight: bold !important; /* Texto em negrito ao passar o mouse */
-    color: #155724 !important; /* Texto verde mais escuro ao passar o mouse */
+@media (max-width: 768px) {
+    .fixed-size-carousel-image {
+        height: 300px !important; /* Altura reduzida para mobile */
+    }
 }
 
-.navbar-nav .nav-link.active {
-    font-weight: bold !important; /* Texto em negrito no link ativo */
-    color: #155724 !important; /* Verde mais vibrante para o link ativo */
-}
-
-/* Animações */
+/* --- Animações (Mantidas como no seu código, com pequenos ajustes de opacidade para coordenação) --- */
 .fade-in {
     opacity: 0;
-    transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out; /* Mantido seu transition, mas a opacidade inicial é 0 para a animação */
 }
 
 .fade-in.show {
@@ -161,7 +215,7 @@ height: 100px;
 .slide-in-left {
     transform: translateX(-50px);
     opacity: 0;
-    transition: transform 1s ease-out, opacity 1s ease-out;
+    transition: transform 1s ease-out, opacity 1s ease-out; /* Mantido seu transition */
 }
 
 .slide-in-left.show {
@@ -170,28 +224,28 @@ height: 100px;
 }
 
 .typing-animation span {
-opacity: 0;
+    opacity: 0;
 }
 
 /* Animation Keyframes */
 @keyframes slideInFromRight {
     0% {
-      transform: translateX(100%); /* Start completely off to the right */
-      opacity: 0; /* Start completely transparent */
+        transform: translateX(100%); /* Start completely off to the right */
+        opacity: 0; /* Start completely transparent */
     }
     100% {
-      transform: translateX(0); /* End at its original position */
-      opacity: 1; /* End fully opaque */
+        transform: translateX(0); /* End at its original position */
+        opacity: 1; /* End fully opaque */
     }
-  }
-  
-  /* Apply the animation to the navbar */
-  .navbar-slide-in {
+}
+
+/* Apply the animation to the navbar */
+.navbar-slide-in {
     animation: slideInFromRight 1s ease-out forwards; /* 1s duration, ease-out timing, keep final state */
     /* Initially hide the navbar to prevent flicker before animation */
     transform: translateX(100%);
     opacity: 0;
-  }
+}
 
 @keyframes typeWriter {
     to {
@@ -202,7 +256,9 @@ opacity: 0;
 .fade-in-text {
     color: #0d8529;
     opacity: 0;
-    animation: fadeIn 2s ease-out forwards;
+    /* Removido animation direto aqui para ser controlado pela classe .show do JS, se for o caso */
+    /* Se você quer que ele anime automaticamente, pode manter */
+    animation: fadeIn 2s ease-out forwards; /* Mantido, se a intenção é animar automaticamente */
 }
 
 @keyframes fadeIn {
@@ -213,6 +269,7 @@ opacity: 0;
         opacity: 1;
     }
 }
+
 .jump-letters {
     display: inline-block; /* Para que os spans fiquem lado a lado e possamos animá-los */
 }
@@ -246,17 +303,6 @@ opacity: 0;
     }
 }
 
-.carousel {
-margin: 20px auto;
-width: 1050px;
-height: 500px;
-}
-
-.fixed-size-carousel-image {
-    width: 1050px !important;
-    height: 500px !important;
-    object-fit: cover; /* Para manter a proporção e cobrir o espaço */
-   }
 /* --- Animações Padrão (necessárias para o funcionamento) --- */
 
 /* Keyframes para Títulos Saltitantes (Bounce) */
@@ -298,14 +344,15 @@ height: 500px;
 }
 
 /* Keyframes para Fade-in genérico */
-@keyframes fadeIn {
+/* Já existe acima, mantido para consistência */
+/* @keyframes fadeIn {
     from {
         opacity: 0;
     }
     to {
         opacity: 1;
     }
-}
+} */
 
 /* Keyframes para Títulos e Elementos Fading In e Escalando */
 @keyframes fadeInScale {
@@ -366,6 +413,8 @@ height: 500px;
     opacity: 0; /* Começa invisível */
     animation: fadeIn 1s ease-out forwards; /* Aplica a animação de fade-in */
     animation-delay: 0.7s; /* Um pequeno atraso para aparecer depois do título principal */
+    max-width: 100%; /* Adicionado para garantir responsividade */
+    height: auto; /* Adicionado para manter a proporção */
 }
 
 /* Imagens do Carrossel com Fade-in */
@@ -379,8 +428,7 @@ height: 500px;
 /* --- Desativando o controle de opacidade e transformações do JavaScript para as classes afetadas --- */
 /* Isso é crucial para que as animações CSS tenham prioridade e os elementos não "sumam" ou resetem */
 .fade-in, .slide-in-left, .fade-in-text {
-    opacity: 0; /* Começa invisível, mas o CSS controla a animação */
-    transform: none; /* Reseta qualquer transformação inicial para o CSS controlar */
+    /* REMOVIDO: opacity: 0; e transform: none; aqui para não anular o início da animação CSS */
     transition: none !important; /* Desativa transições do JS para que a animação CSS assuma */
 }
 

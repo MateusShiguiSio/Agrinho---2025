@@ -23,7 +23,6 @@
         <span>c</span><span>a</span><span>m</span><span>p</span><span>o</span> <span>e</span> <span>c</span><span>i</span><span>d</span><span>a</span><span>d</span><span>e</span>
       </h3>
     </div>
-    </div>
   </header>
 
   <nav class="navbar navbar-expand-lg bg-light navbar-slide-in">
@@ -48,11 +47,12 @@
           </li>
           <li class="nav-item">
             <a class="nav-link text-primary" href="contato.html">📞 Contato</a>
-        </li>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
+
   <main class="container my-5">
     <section class="row align-items-center mb-5">
       <div class="col-md-6">
@@ -235,28 +235,27 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const fadeInElements = document.querySelectorAll('.fade-in');
-      fadeInElements.forEach(element => {
-        setTimeout(() => {
-          element.classList.add('show');
-        }, 100);
-      });
+      // Funções para adicionar a classe 'show' após um pequeno atraso
+      const animateElements = (selector, delay = 100) => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(element => {
+          setTimeout(() => {
+            element.classList.add('show');
+          }, delay);
+        });
+      };
 
-      const slideInLeftElements = document.querySelectorAll('.slide-in-left');
-      slideInLeftElements.forEach(element => {
-        setTimeout(() => {
-          element.classList.add('show');
-        }, 100);
-      });
+      animateElements('.fade-in');
+      animateElements('.slide-in-left');
+      animateElements('.fade-in-text');
 
-      const fadeInTextElements = document.querySelectorAll('.fade-in-text');
-      fadeInTextElements.forEach(element => {
-        element.classList.add('show');
-      });
-
-      // Animação de digitação para o subtítulo (mais rápido)
+      // Animação de digitação para o subtítulo
       const typingSubtitle = document.querySelector('.typing-animation');
       if (typingSubtitle) {
         const spansSubtitle = typingSubtitle.querySelectorAll('span');
@@ -265,9 +264,8 @@
         });
       }
 
-      // Animação de salto para o título principal
-      const jumpTitle = document.querySelector('.jump-letters');
-      // A animação do título já é controlada pelo CSS aplicado aos spans
+      // Animação de salto para o título principal (já controlada pelo CSS)
+      // A navbar-slide-in já tem animação por CSS, não precisa de JS para 'show'
     });
   </script>
 </body>
